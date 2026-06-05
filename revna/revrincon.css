@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+@font-face {
+    font-family: 'Revnafont1';
+    src: url(https://hartrp.github.io/kaelkoth/fonts/Brighthorse Regular.otf);
+}
+
+
+#moodboard {
+    width: 500px; 
+    height: 500px; 
+    display: flex; 
+    flex-wrap: wrap; 
+    background: var(--tbckg); 
+    border: var(--border1); 
+    padding: 10px; 
+    margin: 0 auto; 
+    justify-content: center; 
+    align-items: center; 
+    align-content: center;
+}
+
+
+#mood br {
+    display: none;
+} 
+
+
+.mood {
+    width: 150px; 
+    height: 150px; 
+    margin: 7px; 
+    
+    background-size: cover !important; 
+    background-position: center !important; 
+    outline: 5px solid #111; 
+    filter: brightness(0.8) grayscale(0.4);
+    
+
+
+    transition: all 0.6s ease-in-out;
+    box-shadow: inset 0 0 0 0 rgba(110, 0, 0, 0);
+}
+
+
+#moodboard:hover .mood:not(:hover) {
+    filter: grayscale(100%) brightness(0.35) contrast(0.9); 
+    opacity: 0.8;
+    outline-color: #111;
+}
+
+
+
+
+
+
+.mood:hover {
+
+
+    background-color: #888 !important; 
+    background-blend-mode: luminosity; 
+
+
+    filter: contrast(1.4) brightness(1.1);
+    
+
+
+    box-shadow: inset 0 0 0 150px rgba(60, 5, 5, 0.5); 
+  
+}
+
+
+.fraserinconrev {
+    font-family: 'Revnafont1', serif !important;
+    font-size: 24px;
+    line-height: 1;
+    text-align: center;
+    letter-spacing: 3px;
+    color: #ccc;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    text-transform: lowercase;
+    display: block;
+    width: 500px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.subrinconrev {
+    font-family: 'Cinzel', serif !important;
+    font-size: 8px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #ccc;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    display: block;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.kaelkoth {
+    text-align: center; 
+    letter-spacing: 5px; 
+    font: 8px 'Cinzel'; 
+    margin-top: 8px; 
+    color: var(--dbckg5);
+    margin-bottom: 10px;
+}
+
+
+
+
+#moodboard2 {
+    width: 500px; 
+    height: 330px; 
+    display: flex; 
+    background: var(--tbckg); 
+    border: var(--border1); 
+    padding: 10px; 
+    margin: 0 auto;
+} 
+.mood1 {
+    width: 150px; 
+    height: 328px; 
+    margin-right: 7px; 
+    background-size: cover !important; 
+    background-position: center !important; 
+    outline: 5px solid white; 
+    filter: brightness(0.7) grayscale(0.4) contrast(1.1);
+} 
+.mood2 {
+    width: 100px; 
+    height: 100px; 
+    margin: 7px; 
+    background-size: cover !important; 
+    background-position: center !important; 
+    outline: 5px solid white; 
+    filter: brightness(0.7) grayscale(0.4) contrast(1.1);
+} 
+.mood-tab {
+    display: flex; 
+    align-content: center; 
+    flex-wrap: wrap;
+} 
+.mood-txt {
+    background: #bcbcbc; 
+    color: var(--dbckg2); 
+    padding: 10px; 
+    font: 500 11px 'Cinzel'; 
+    font-style: italic; 
+    line-height: 20px; 
+    text-align: center; 
+    display: flex; 
+    height: 308px; 
+    width: 88px; 
+    align-items: center; 
+    outline: 5px solid #bcbcbc;
+}
