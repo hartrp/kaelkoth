@@ -1,0 +1,148 @@
+@keyframes spell-pass {
+  from { background-position: 200% 0; } 
+  to   { background-position: 0 0; }   
+}
+
+
+.portiapost {
+  max-width: 450px;
+  margin: auto;
+  background-color: transparent;
+  color: #d1d1d1;
+  line-height: 1.6;
+}
+
+
+.portiatitcon {
+  text-align: center;
+  margin-bottom: 1.6em;
+}
+
+
+.portiatit {
+  font-family: "BAGISKO", sans-serif;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  display: inline-block;
+  margin: 0.5em 0 0.1em 0;
+  cursor: default;
+  background: linear-gradient(
+    to left,
+    var(--groups) 0%,
+    #ffffff 40%,
+    #ffffff 60%,
+    var(--groups) 100%
+  );
+  background-size: 200% 100%;
+  background-repeat: repeat-x;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: spell-pass 7s linear infinite;
+  text-shadow: 0 0 6px rgba(255,174,210,0.3), 0 0 12px rgba(255,174,210,0.15);
+}
+
+
+.portiaquote {
+  text-align: center;
+  color: #a0a0a0;
+  font-family: "Cormorant SC", serif;
+  font-size: 0.9em;
+  max-width: 80%;
+  margin: 0 auto 0.3em auto;
+  padding: 0;
+}
+
+
+.portialetter {
+  font-family: "BAGISKO";
+  font-size: 5em;
+  float: left;
+  line-height: 1; 
+  padding: 20px 0 20px 10px; 
+  margin: 0 15px -20px 0px; 
+  font-weight: normal;
+  cursor: default;
+  background: -webkit-linear-gradient(var(--groups), #9b9b9b); 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent;
+}
+
+
+}
+
+
+#line-ac { width: 1.5px; height: 60px; background: -webkit-radial-gradient(#333, #3333334f); margin: auto; margin-top: 15px; margin-bottom: 15px; }
+
+
+.portiabody {
+  font-family: "EB Garamond", serif;
+  line-height: 1.7;
+  text-align: justify; 
+  color: #d1d1d1;
+  font-size: 1.2em;
+  overflow: hidden;   
+}
+
+
+.portiaicon {
+  font-family: 'game-icon';
+  font-size: 2.3em;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  line-height: 1;
+  background: linear-gradient(
+    to right,
+    var(--groups) 20%,
+    #d1d1d1 45%,
+    #d1d1d1 55%,
+    var(--groups) 80%
+  );
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: spell-pass 5s linear infinite;
+  margin: 0.5em 0;
+}
+
+
+.portiadatos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 1em;
+  flex-wrap: wrap;
+}
+
+
+.portia-data-line {
+  display: flex;
+  align-items: center;
+  color: #888888;
+  font-family: "Cormorant SC", serif;
+  font-size: 0.8em;
+  margin: 0;
+}
+
+
+.portia-data-line .game-icon {
+  color: var(--groups);
+  font-size: 1.3em;
+  margin-right: 0.3em;
+}
+
+
+.portiadivider {
+  font-family: 'Wastern Divider';
+  font-size: 2.2em;
+  color: var(--groups);
+  text-align: center;
+  line-height: 1;
+  margin: 0 0 0 0;
+  transform: translateX(-1.2px);
+  display: block;
+}
