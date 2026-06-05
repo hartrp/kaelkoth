@@ -1,0 +1,143 @@
+.maddyfirma {
+  width: 220px;
+  height: 200px;
+  box-sizing: border-box;
+  padding: 6px;
+  background: #404040;
+  margin: 20px auto;
+  position: relative;
+  transition: all ease-in-out 1s;
+}
+
+.maddyfirma .ima {
+  width: 100%;
+  height: 100%;
+  background: url(https://i.imgur.com/LNL9Wug.gif);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all ease-in-out 1s;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.maddyfirma .ima::before, .maddyfirma .ima::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity ease-in-out 1s;
+}
+
+.maddyfirma .ima::before {
+  background-color: var(--groups);
+  opacity: 0;
+  mix-blend-mode: color;
+}
+
+.maddyfirma .ima::after {
+  background: url() no-repeat center center / cover;
+  opacity: 0;
+  mix-blend-mode: screen;
+}
+
+.maddyfirma:hover .ima {
+  filter: grayscale(1);
+}
+
+.maddyfirma:hover .ima::before {
+  opacity: 1;
+}
+
+.maddyfirma:hover .ima::after {
+  opacity: 1;
+}
+
+.maddyfirma .text2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  color: #ccc;
+  font-family: "Victor Mono", monospace;
+  font-size: 7px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 900;
+  text-align: center;
+  padding: 10px;
+  filter: blur(30px);
+  opacity: 0;
+  transition: all ease-in-out 1s;
+  width: 210px;
+  line-height: 12px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.maddyfirma:hover .text2 {
+  filter: blur(0px);
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.maddyfirma .text2 u,
+.textpr u {
+  background: var(--groups);
+  color: #eee;
+  padding: 1px 1px 1px 3px;
+  text-shadow: 1px 2px 0px #000;
+  text-decoration: none;
+}
+
+.maddyfirma .text2 b,
+.maddyfirma .text2 strong {
+  color: var(--groups);
+}
+
+.textpr {
+  position: absolute;
+  bottom: 25px;
+  left: 52%;
+  transform: translateX(-50%);
+  z-index: 2;
+  color: #ccc;
+  font-family: "Victor Mono", monospace;
+  font-size: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 900;
+  white-space: nowrap;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.textpr span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all ease-in-out 0.7s;
+}
+
+.textpr .before-hover {
+  transform: translateX(-100px);
+}
+
+.textpr .after-hover {
+  opacity: 0;
+  transform: translateX(-100px);
+}
+
+.maddyfirma:hover .textpr .before-hover {
+  opacity: 0;
+}
+
+.maddyfirma:hover .textpr .after-hover {
+  opacity: 1;
+}
