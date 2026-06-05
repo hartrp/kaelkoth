@@ -2,6 +2,10 @@
     font-family: 'maddyfont';
     src: url(https://hartrp.github.io/kaelkoth/fonts/Lionkin.otf);
 }
+@font-face {
+    font-family: 'maddycalfont';
+    src: url(https://hartrp.github.io/kaelkoth/fonts/1522-Vicentino-W01-Regular.ttf);
+}
 
 .maddytab {
     max-width: 450px;
@@ -10,7 +14,7 @@
     color: #d1d1d1;
     line-height: 1.6;
     /* La fuente se aplica a los elementos que hereden o la definan */
-    font-family: "F1522 Vicentino W01 Regular", serif; 
+    font-family: "maddycalfont", serif; 
 }
 
 .maddyhead {
@@ -42,7 +46,7 @@
   margin: 0;
   padding-left: 0.15em;        
   box-sizing: border-box;
-  font-family: "F1522 Vicentino W01 Regular", serif;
+  font-family: "maddycalfont", serif;
 
 
   background: -webkit-linear-gradient(var(--groups), #000);
@@ -60,7 +64,7 @@
   font-size: 1.2em;
   line-height: 1;
   text-align: left;
-  font-family: "F1522 Vicentino W01 Regular", serif;
+  font-family: "maddycalfont", serif;
   z-index: 5;
 }
 
@@ -109,7 +113,7 @@
     color: #999; 
     max-width: 450px; 
     margin-left: auto;
-    font-family: "F1522 Vicentino W01 Regular", serif; /* 🌟 FUENTE ACTUALIZADA 🌟 */
+    font-family: "maddycalfont", serif; /* 🌟 FUENTE ACTUALIZADA 🌟 */
 }
 
 .maddycap {
@@ -174,7 +178,7 @@ text-shadow: 0 0 0.5px var(--groups);
 .maddydat {
     margin: 0; 
     text-align: center;
-    font-family: "F1522 Vicentino W01 Regular", serif;
+    font-family: "maddycalfont", serif;
     font-size: 1em;
 }
 
