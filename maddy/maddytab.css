@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'Maddyfont';
-  src: url(https://dl.dropbox.com/scl/fi/c0a6ffjzbxj76akkc9wb4/Lionkin-BF68e773f3dfc0b.otf?rlkey=etinvpdsmpkl2123epahk2ayf&st=yf51748e&dl);
+    font-family: 'maddyfont';
+    src: url(https://hartrp.github.io/kaelkoth/fonts/Lionkin.otf);
 }
 
 .maddytab {
@@ -189,9 +189,9 @@ text-shadow: 0 0 0.5px var(--groups);
   transform: translate(-50%, -50%) rotate(130deg);
 
   background-color: var(--groups); /* 🎨 color del adorno */
-  -webkit-mask: url('https://dl.dropboxusercontent.com/scl/fi/2fziuvwqhf81x0p8qm4a5/24501.svg?rlkey=p9b4k8sap8u4uaf8mhv96z92t&st=wr58sl4y') no-repeat center;
+  -webkit-mask: url('https://hartrp.github.io/kaelkoth/maddy/tinta.svg') no-repeat center;
   -webkit-mask-size: contain;
-  mask: url('https://dl.dropbox.com/scl/fi/rdhhr4552ze4ztzo82ziq/32534.svg?rlkey=tg5g3b7du2uoexsug6zd0wlxt&st=5sujqp2j&dl=0') no-repeat center;
+  mask: url('https://hartrp.github.io/kaelkoth/maddy/pluma.svg') no-repeat center;
   mask-size: contain;
   opacity: 0.5; /* 🌫️ más sutil */
   z-index: 1; /* detrás del tintero */
