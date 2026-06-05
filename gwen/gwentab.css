@@ -3,7 +3,6 @@
     src: url(https://hartrp.github.io/kaelkoth/fonts/OldMasterRegular.otf);
 }
 
-
 .gwentab {
     max-width: 450px;
     margin: auto;
@@ -12,13 +11,11 @@
     line-height: 1.6;
 }
 
-
 .gwenhead {
     text-align: center;
     margin-bottom: 0em;
   margin-top: 2em;
 }
-
 
 .gwent {
     font-family: "gwenfont";
@@ -29,8 +26,6 @@
     margin: 0.5em 0 0 0;
    line-height: 0.9;
 }
-
-
 
 
 .marcogwenq {
@@ -46,8 +41,6 @@
     padding-left: 0.6em;
     box-sizing: border-box;
 }
-
-
 
 
 .marcogwenq::before {
@@ -66,8 +59,6 @@
 }
 
 
-
-
 .gwenq {
     text-align: center;
     color: #a0a0a0;
@@ -83,8 +74,6 @@
 }
 
 
-
-
 .gwencap {
     font-family: "gwenfont";
     font-size: 3.5em;
@@ -93,8 +82,6 @@
     margin: 5px 15px 0 0;
     background: -webkit-linear-gradient(var(--groups), #9b9b9b); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
 }
-
-
 
 
 .gwenbody {
@@ -108,19 +95,6 @@
    font-style: normal;
  
 }
-
-
-.gwenbody b,
-.gwenbody strong {
-  color: var(--groups);
-  font-weight: 400;
-  font-family: "Bellefair", sans-serif;
-text-shadow: 0 0 0.5px var(--groups);           
-  font-style: inherit;               /* por si acaso */
-  -webkit-text-fill-color: var(--groups);
-  background: none !important;
-  -webkit-background-clip: border-box;
-}
 .gwenfooter {
   color: #fff; 
   padding: 0px 1px; 
@@ -130,8 +104,6 @@ text-shadow: 0 0 0.5px var(--groups);
   width: 100%;
   box-sizing: border-box; 
 }
-
-
 
 
 .gwendat {
@@ -144,11 +116,7 @@ text-shadow: 0 0 0.5px var(--groups);
 }
 
 
-
-
 .gwenfootd {
-
-
 
 
   width: 100px; 
