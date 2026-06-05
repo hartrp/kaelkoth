@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'Portiafont';
+    src: url(https://hartrp.github.io/kaelkoth/fonts/fonts/BAGISKO.otf);
+}
+
+@font-face {
+    font-family: 'Portiadivider';
+    src: url(https://hartrp.github.io/kaelkoth/fonts/WasternDivider.otf);
+}
+
+
 @keyframes spell-pass {
   from { background-position: 200% 0; } 
   to   { background-position: 0 0; }   
@@ -20,7 +31,7 @@
 
 
 .portiatit {
-  font-family: "BAGISKO", sans-serif;
+  font-family: "Portiafont", sans-serif;
   font-size: 2.5em;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -56,7 +67,7 @@
 
 
 .portialetter {
-  font-family: "BAGISKO";
+  font-family: "Portiafont";
   font-size: 5em;
   float: left;
   line-height: 1; 
@@ -137,7 +148,7 @@
 
 
 .portiadivider {
-  font-family: 'Wastern Divider';
+  font-family: 'Portiadivider';
   font-size: 2.2em;
   color: var(--groups);
   text-align: center;
