@@ -2,6 +2,10 @@
     font-family: 'Revnaruna';
     src: url(https://hartrp.github.io/kaelkoth/fonts/NorthernRunes-Frame.otf);
 }
+@font-face {
+    font-family: 'rune';
+    src: url(https://hartrp.github.io/kaelkoth/fonts/rune.ttf);
+}
 
 
 @keyframes temblor {
