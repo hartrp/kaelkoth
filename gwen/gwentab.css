@@ -1,0 +1,163 @@
+@font-face {
+    font-family: 'Gwenfont';
+    src: url(https://dl.dropbox.com/scl/fi/gyioh3iotpyyja7ki2aqv/Old-Master-Regular.otf?rlkey=9owspz4ukbu5wbxmu2u7f5s1f&st=tb00tub0&dl=0);
+}
+
+
+.gwentab {
+    max-width: 450px;
+    margin: auto;
+    background-color: transparent;
+    color: #d1d1d1; 
+    line-height: 1.6;
+}
+
+
+.gwenhead {
+    text-align: center;
+    margin-bottom: 0em;
+  margin-top: 2em;
+}
+
+
+.gwent {
+    font-family: "gwenfont";
+    font-size: 3.5em;
+    color: var(--groups);
+    letter-spacing: 5px;
+    display: inline-block;
+    margin: 0.5em 0 0 0;
+   line-height: 0.9;
+}
+
+
+
+
+.marcogwenq {
+    position: relative;
+    width: 100%;
+    max-width: 250px;
+    aspect-ratio: 1 / 1;
+    margin: 0 auto; 
+  margin-bottom: -1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0.6em;
+    box-sizing: border-box;
+}
+
+
+
+
+.marcogwenq::before {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url('https://imgur.com/IR4A1xS.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.2; 
+}
+
+
+
+
+.gwenq {
+    text-align: center;
+    color: #a0a0a0;
+    font-family: "cinzel", serif;
+    font-style: regular;
+    margin-top: 1em; 
+    padding: 1em 1em;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 70%;
+    font-size: 0.65em;
+  
+}
+
+
+
+
+.gwencap {
+    font-family: "gwenfont";
+    font-size: 3.5em;
+    float: left;
+    line-height: 1.4;
+    margin: 5px 15px 0 0;
+    background: -webkit-linear-gradient(var(--groups), #9b9b9b); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+
+
+
+
+.gwenbody {
+    line-height: 1.4;
+    text-align: justify;
+    color: #d1d1d1;
+    font-size: 1.4em;
+    margin-top: 1.5em;
+   font-family: "Bellefair", sans-serif;
+   font-weight: 400;
+   font-style: normal;
+ 
+}
+
+
+.gwenbody b,
+.gwenbody strong {
+  color: var(--groups);
+  font-weight: 400;
+  font-family: "Bellefair", sans-serif;
+text-shadow: 0 0 0.5px var(--groups);           
+  font-style: inherit;               /* por si acaso */
+  -webkit-text-fill-color: var(--groups);
+  background: none !important;
+  -webkit-background-clip: border-box;
+}
+.gwenfooter {
+  color: #fff; 
+  padding: 0px 1px; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  width: 100%;
+  box-sizing: border-box; 
+}
+
+
+
+
+.gwendat {
+    margin-right: 0;
+  margin-top: 1.2em;
+    text-align: center;
+    margin-left: 0;
+    font-family: "cinzel", serif;
+    font-size: 0.6em;
+}
+
+
+
+
+.gwenfootd {
+
+
+
+
+  width: 100px; 
+  height: 100px;
+  margin-left: 0;
+  margin-right: -30px;
+  background-image: url('https://imgur.com/YqTdTNs.png'); 
+background-size: contain; 
+  background-repeat: no-repeat;  
+  background-position: center;  
+  opacity: 0.3; 
+}
