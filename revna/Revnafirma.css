@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
+/* --- Main Signature Container --- */
+.revnafir-signature {
+  width: 250px;
+  height: 250px;
+  margin: auto;
+  margin-top: 20px;
+  position: relative;
+  overflow: hidden;
+  background-color: #000;
+  outline-offset: 6px;
+  outline: 1px solid #3d4a5c;
+  transition: 1.5s ease-in-out;
+}
+
+.revnafir-signature:hover {
+  outline: 1px solid #111;
+  transition: 1.5s ease-in-out;
+}
+
+/* --- Styles for BOTH GIFs --- */
+.revnafir-signature img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+/* --- The GIF that is revealed on hover --- */
+.revnafir-hover-gif {
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  filter: brightness(60%);
+}
+
+/* --- NEW: Centering logic for the phrases --- */
+.revnafir-initial-text-container,
+.revnafir-hover-text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: 2;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Transition for the initial text */
+.revnafir-initial-text-container {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Transition for the hover text */
+.revnafir-hover-text-container {
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out 0.5s;
+}
+
+/* --- Hover Logic --- */
+.revnafir-interactive:hover .revnafir-hover-gif {
+  opacity: 1;
+}
+
+.revnafir-interactive:hover .revnafir-initial-text-container {
+  opacity: 0;
+}
+
+.revnafir-interactive:hover .revnafir-hover-text-container {
+  opacity: 1;
+}
+
+/* --- Text Content Styles --- */
+.revnafir-initial-phrase,
+.revnafir-revealed-phrase {
+  font-family: 'Cinzel', serif;
+  font-size: 12px;
+  font-style: italic;
+  color: #d1d1d1;
+  font-weight: 700;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.9);
+}
+
+/* --- ESTILO DE LÍNEA DE PUNTOS FIJOS --- */
+.revnafir-line-of-dots-top,
+.revnafir-line-of-dots-bottom {
+  font-family: 'Cinzel', serif;
+  font-size: 20px;
+  letter-spacing: 7px;
+  color: rgba(212, 241, 249, 0.5);
+  white-space: nowrap;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.revnafir-line-of-dots-top {
+  top: 15px; /* Posición para la línea superior más cerca del borde */
+}
+
+.revnafir-line-of-dots-bottom {
+  bottom: 15px; /* Posición para la línea inferior más cerca del borde */
+}
