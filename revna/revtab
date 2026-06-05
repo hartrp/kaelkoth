@@ -1,0 +1,307 @@
+@font-face {
+    font-family: 'Revnaruna';
+    src: url(https://dl.dropbox.com/scl/fi/0a9vz3ic6q406x9pedmnu/NorthernRunes-Frame.otf?rlkey=s8e39n4xs72kvb3u9g75lzoje&st=qw5jjzul&dl=0);
+}
+
+
+@keyframes temblor {
+    0% { transform: translate(0.5px, 0.5px); }
+    33% { transform: translate(-0.5px, 0px) skewX(0.5deg); }
+    66% { transform: translate(0px, -0.5px); }
+    100% { transform: translate(0.5px, 0px) skewX(-0.5deg); }
+}
+
+
+/* ========================================================================= */
+/* ESTRUCTURA GENERAL */
+/* ========================================================================= */
+.revnatab {
+    max-width: 450px;
+    margin: auto;
+    background-color: transparent;
+    color: #d1d1d1;
+    line-height: 1.6;
+}
+
+
+/* ========================================================================= */
+/* ENCABEZADO */
+/* ========================================================================= */
+.revnahead {
+    text-align: center;
+    margin-bottom: 1em;
+    margin-top: 2em;
+}
+
+
+.revnat {
+    font-family: "revnaruna";
+    font-size: 4em;
+    color: var(--groups);
+    letter-spacing: 4px;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.2);
+    display: inline-block;
+    margin: 0;
+    line-height: 0.9;
+}
+
+
+.revnat:hover {
+    background: linear-gradient(to right, #d1d1d1, rgba(209, 209, 209, 0.6), transparent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: temblor 0.6s infinite alternate;
+}
+
+
+.revna-icon {
+    text-align: center;
+    margin: 0.5em 0;
+    font-size: 2em;
+    color: var(--groups);
+    font-weight: bold;
+}
+
+
+#line-ac {
+    width: 1.5px; height: 60px;
+    background: -webkit-radial-gradient(#333, #3333334f);
+    margin: 15px auto;
+}
+
+
+/* ========================================================================= */
+/* CITA (QUOTE) */
+/* ========================================================================= */
+.revnaq {
+     text-align: center;
+  color: #a0a0a0;
+  font-family: "Cinzel", serif;
+  font-size: 0.7em;
+  max-width: 80%;
+  margin: 0 auto 0.3em auto;
+  padding: 0;
+
+
+}
+
+
+/* ========================================================================= */
+/* CUERPO DEL TEXTO Y CAPITULAR */
+/* ========================================================================= */
+.revnaprebody {
+    color: #fff;
+    padding: 0px 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+.revnacomp {
+    margin: 1.2em 0 0 0;
+    text-align: right;
+    font-family: "Cinzel", serif;
+    font-size: 0.8em;
+}
+
+
+.revnacap {
+    font-family: "revnaruna";
+    font-size: 6.5em;
+    float: left;
+    line-height: 0.9;
+    margin: 0px 15px 0px 0px;
+    font-weight: normal;
+    background: -webkit-linear-gradient(var(--groups), #9b9b9b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.revnacap:hover {
+    background: linear-gradient(#d1d1d1, rgba(209, 209, 209, 0.6), transparent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: temblor 0.6s infinite alternate;
+}
+
+
+.revnabody {
+    line-height: 1.6;
+    text-align: justify;
+    color: #d1d1d1;
+    font-size: 1.1em;
+    margin: 1.5em 0;
+    font-family: "EB Garamond", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/* ========================================================================= */
+/* FOOTER (Pie de Página) */
+/* ========================================================================= */
+
+
+.revfooter2 {
+    color: #fff;
+    padding: 0px 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+.revfoot-center {
+    position: relative; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    /* 💥 CLAVE: FUERZA la capa Z para que el contenido (pájaro) se muestre arriba 💥 */
+    z-index: 20; 
+}
+
+
+.revdat {
+    margin: 0; 
+    text-align: center;
+    font-family: "Cinzel", serif;
+    font-size: 0.65em;
+}
+
+
+.revfootd {
+    width: 80px;
+    height: 100px;
+    margin: 0 auto;
+    background-image: url('https://imgur.com/4hxYF5e.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative; 
+    z-index: 10; /* Se mantiene para tener prioridad interna */
+}
+
+
+/* ========================================================================= */
+/* RUNAS DEL FOOTER (SOLUCIÓN DE POSICIONAMIENTO Y DEGRADADO) */
+/* ========================================================================= */
+
+
+
+
+
+
+.revnarunitascomp {
+    text-align: center;
+    background: -webkit-linear-gradient(right, var(--groups), #000); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    font-family: "rune", serif;
+    font-style: regular;
+     margin-right: 0;
+  margin-top: 1em;
+    text-align: center;
+    margin-left: 0;
+}
+
+
+
+
+.revnarunitascomp::before {
+  user-select: none;
+  pointer-events: none;
+}
+
+
+.revnarunitas {
+    /* 💥 SOLUCIÓN: Centrado ABSOLUTO y z-index negativo (DETRÁS) 💥 */
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    width: fit-content; 
+    z-index: -1; /* ¡Esto lo empuja detrás de todo el contenido del footer! */
+}
+
+
+.revnarunitas f {
+    /* Estilos del Texto de la Runa */
+    text-align: center;
+    font-family: "rune", serif;
+    font-style: regular;
+    margin: 0;
+    padding: 0;
+    line-height: 1; 
+    
+    /* Degradado Difuminado (Funde a los lados) */
+    background: linear-gradient(
+        to right, 
+        rgba(0, 0, 0, 0) 0%, 
+        var(--groups) 15%, 
+        var(--groups) 85%, 
+        rgba(0, 0, 0, 0) 100% 
+    );
+    
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+}
+
+
+.revnarunitas f::before {
+    user-select: none;
+    pointer-events: none;
+}
+
+
+/* Runas del revnaprebody */
+.revnarunitas c {
+    text-align: center;
+    background: -webkit-linear-gradient(right, var(--groups), #000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "rune", serif;
+    font-style: regular;
+}
+
+
+/* ... (Otras reglas de runas que no afectan el footer) ... */
+
+
+.revnarunitasv {
+    writing-mode: vertical-rl;
+    text-align: center;
+    margin: 1.4em auto 0 auto;
+    color: var(--groups);
+    font-family: "rune", serif;
+    font-style: regular;
+    font-size: 0.8em;
+}
+
+
+.revnarunitasv::before {
+    content: "dakjsdhadjk";
+    user-select: none;
+    pointer-events: none;
+}
+
+
+/* ========================================================================= */
+/* ELEMENTOS EXTRA */
+/* ========================================================================= */
+.revnasong {
+    max-width: 300px;
+    margin: 20px auto 40px auto;
+    overflow: hidden;
+}
+
+
+.revnasong iframe {
+    width: 100%;
+    display: block;
+}
