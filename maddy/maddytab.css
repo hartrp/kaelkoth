@@ -1,0 +1,214 @@
+@font-face {
+  font-family: 'Maddyfont';
+  src: url(https://dl.dropbox.com/scl/fi/c0a6ffjzbxj76akkc9wb4/Lionkin-BF68e773f3dfc0b.otf?rlkey=etinvpdsmpkl2123epahk2ayf&st=yf51748e&dl);
+}
+
+.maddytab {
+    max-width: 450px;
+    margin: auto;
+    background-color: transparent;
+    color: #d1d1d1;
+    line-height: 1.6;
+    /* La fuente se aplica a los elementos que hereden o la definan */
+    font-family: "F1522 Vicentino W01 Regular", serif; 
+}
+
+.maddyhead {
+    text-align: center;
+    margin-bottom: 0em;
+    margin-top: 2em;
+    position: relative;
+}
+
+.maddyt,
+.maddyt-block-content,
+.maddyt-titlewrap {
+  overflow: visible;
+  box-sizing: border-box;
+}
+
+
+.maddyt-titlewrap {
+  display: inline-block;      
+  position: relative;
+  text-align: center;
+}
+
+
+.maddyt-large {
+  display: block;
+  font-size: 3.5em;
+  line-height: 1.8;
+  margin: 0;
+  padding-left: 0.15em;        
+  box-sizing: border-box;
+  font-family: "F1522 Vicentino W01 Regular", serif;
+
+
+  background: -webkit-linear-gradient(var(--groups), #000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--groups); /* respaldo por si el navegador no soporta gradient */
+}
+
+/* 🔹 Título pequeño, alineado con el ancho del grande */
+.maddyt-small {
+  position: absolute;
+  left: 0;                     /* comienza justo donde empieza el título */
+  bottom: 100%;                /* sobre el título */
+  transform: translateY(1.5em);
+  font-size: 1.2em;
+  line-height: 1;
+  text-align: left;
+  font-family: "F1522 Vicentino W01 Regular", serif;
+  z-index: 5;
+}
+
+/* (Opcional) Visualización temporal para depurar si aún no queda alineado:
+.maddyt-titlewrap { outline: 1px dotted lime; }
+.maddyt-small { outline: 1px dashed red; }
+.maddyt-large { outline: 1px solid blue; }
+*/
+
+.maddysep {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 160px;
+  background: url('https://i.imgur.com/gv43nw1.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.1;
+  z-index: 1; /* detrás */
+}
+.maddydivider {
+  position: relative;
+  max-width: 450px;
+  margin: -1.8em auto 1em; /* añade espacio antes del body */
+  text-align: center;
+  min-height: 120px; /* asegura un alto base para centrar el divisor */
+}
+.maddyq {
+  text-align: center;
+  font-size: 1.2em;
+  color: #999;
+  margin-top: -2em;   /* separa un poco del título */
+  margin-bottom: 0;    /* para que no empuje demasiado el divisor */
+  position: relative;
+  z-index: 2;           /* debajo del título, encima del fondo */
+}
+/* 🖋️ TEXTO DE ACOMPAÑAMIENTO (.maddycomp) 🖋️ */
+.maddycomp {
+    text-align: right;
+    font-size: 1.2em; 
+    margin-right: 0px; 
+    margin-top: -1.4em;
+    color: #999; 
+    max-width: 450px; 
+    margin-left: auto;
+    font-family: "F1522 Vicentino W01 Regular", serif; /* 🌟 FUENTE ACTUALIZADA 🌟 */
+}
+
+.maddycap {
+    font-family: "maddyfont";
+    font-size: 4em;
+    float: left;
+    line-height: 1;
+    margin: 0px 15px 0 0;
+    background: -webkit-linear-gradient(var(--groups), #000); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+
+.maddybody {
+    line-height: 1.4;
+    text-align: justify;
+    color: #d1d1d1;
+    font-size: 1.3em;
+    margin-bottom: 0em;
+    margin-top: 0.5em;
+   font-family: "Bellefair", sans-serif;
+   font-weight: 400;
+   font-style: normal;
+ 
+}
+
+
+.maddybody b,
+.maddybody strong {
+  color: var(--groups);
+  font-weight: 400;
+  font-family: "Bellefair", sans-serif;
+text-shadow: 0 0 0.5px var(--groups);           
+  font-style: inherit;               /* por si acaso */
+  -webkit-text-fill-color: var(--groups);
+  background: none !important;
+  -webkit-background-clip: border-box;
+}
+
+.maddyfooter {
+    color: #999; 
+    padding: 0px 1px;
+    margin-top: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; 
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.maddyfootcenter {
+    position: relative; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  margin-left: 2.2em;
+  margin-bottom: -0.4em;
+    width: 100px;
+    height: 100px;
+    /* 💥 CLAVE: FUERZA la capa Z para que el contenido (pájaro) se muestre arriba 💥 */
+    z-index: 20; 
+}
+
+.maddydat {
+    margin: 0; 
+    text-align: center;
+    font-family: "F1522 Vicentino W01 Regular", serif;
+    font-size: 1em;
+}
+
+
+/* 🔹 Capa decorativa SVG (detrás del tintero) */
+.maddypluma {
+  position: absolute;
+  top: 80%;
+  left: 40%;
+  width: 120px;
+  height: 100px;
+  transform: translate(-50%, -50%) rotate(130deg);
+
+  background-color: var(--groups); /* 🎨 color del adorno */
+  -webkit-mask: url('https://dl.dropboxusercontent.com/scl/fi/2fziuvwqhf81x0p8qm4a5/24501.svg?rlkey=p9b4k8sap8u4uaf8mhv96z92t&st=wr58sl4y') no-repeat center;
+  -webkit-mask-size: contain;
+  mask: url('https://dl.dropbox.com/scl/fi/rdhhr4552ze4ztzo82ziq/32534.svg?rlkey=tg5g3b7du2uoexsug6zd0wlxt&st=5sujqp2j&dl=0') no-repeat center;
+  mask-size: contain;
+  opacity: 0.5; /* 🌫️ más sutil */
+  z-index: 1; /* detrás del tintero */
+
+  
+}
+
+/* 🔸 Tintero (encima del SVG) */
+.maddyfootd {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  background-image: url('https://imgur.com/wMr4XG6.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.9;
+  z-index: 2; /* encima */
+}
+
