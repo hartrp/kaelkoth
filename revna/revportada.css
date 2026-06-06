@@ -1,7 +1,8 @@
 @font-face {
-    font-family: 'Revnaruna';
-    src: url(https://dl.dropbox.com/scl/fi/cwjzqy38sgnd0lcpi040y/Brighthorse-Regular.otf?rlkey=et0u2rjuwvquny07wjlpdf205&st=hgm4g7b2&dl=0l);
+    font-family: 'Revnafont1';
+    src: url(https://hartrp.github.io/kaelkoth/fonts/Brighthorse-Regular.otf);
 }
+
 
 
 
@@ -124,7 +125,7 @@
 }
 
 .revbox2 name{
-  font-family: "Revnaruna";
+  font-family: "Revnafont1";
   color: var(--groups);
   font-size: 130px;
   line-height: 164px;
@@ -149,7 +150,7 @@
   width:50px;
   height:50px;
   background:#0d0d0d;
-  font-size: 25px;
+  font-size: 35px;
   line-height: 30px;
   display:flex;
   align-items:center;
