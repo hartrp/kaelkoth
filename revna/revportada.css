@@ -4,10 +4,10 @@
 }
 
 .revportada{
-  width:800px;
+  width: 800px;
   height:auto;
   background:#111;
-  margin: 0px 40px;
+  margin:auto;
   padding:20px;
   outline-offset:10px;
   outline:1px solid #111;
@@ -122,7 +122,7 @@
 }
 
 .revbox2 name{
-  font-family: "Revnafont1";
+  font-family: "Revnaruna";
   color: var(--groups);
   font-size: 130px;
   line-height: 164px;
@@ -162,6 +162,11 @@
   background:#151515;
   transform:rotate(-20deg);
   transition:all ease-in-out .3s;
+}
+
+.rvn-menu {
+  font-size: 25px !important;
+  line-height: 1 !important;
 }
 
 .revdatos {
@@ -275,7 +280,7 @@
 }
 
 .revmusic music i{
-  font-size:35px;
+  font-size:20px;
   line-height:20px;
    color: var(--groups);
   margin-top:5px;
