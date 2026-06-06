@@ -122,7 +122,7 @@
 }
 
 .revbox2 name{
-  font-family: "Revnaruna";
+  font-family: "Revnafont1";
   color: var(--groups);
   font-size: 130px;
   line-height: 164px;
@@ -167,6 +167,7 @@
 .rvn-menu {
   font-size: 25px !important;
   line-height: 1 !important;
+  font-weight: normal !important;
 }
 
 .revdatos {
