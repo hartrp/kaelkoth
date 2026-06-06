@@ -1,0 +1,284 @@
+@font-face {
+    font-family: 'Revnaruna';
+    src: url(https://dl.dropbox.com/scl/fi/cwjzqy38sgnd0lcpi040y/Brighthorse-Regular.otf?rlkey=et0u2rjuwvquny07wjlpdf205&st=hgm4g7b2&dl=0l);
+}
+
+
+
+.revportada{
+  width:800px;
+  height:auto;
+  background:#111;
+  margin: 0px 40px;
+  padding:20px;
+  outline-offset:10px;
+  outline:1px solid #111;
+  box-sizing:border-box;
+  margin-top:12px;
+  overflow: hidden; 
+  position: relative;
+    z-index: 1;
+}
+.minsportada,
+.revinfobox,
+.revbox2,
+.revdatos,
+.revmusic {
+    position: relative;
+    z-index: 1;
+}
+  
+  .revportada::before {
+  content: ''; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://i.pinimg.com/1200x/01/63/50/0163500abf6987cdc1e31352c5bdcc56.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.15; 
+  z-index: 0; 
+  pointer-events: none;
+}
+
+.revinfobox{
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:left;
+  gap:20px;
+}
+
+.imgrev{
+  background:url(https://64.media.tumblr.com/8a93036c4cb4369ee8fcd1b391e8fa42/aa0782afa37f2207-86/s540x810/fe2d6785fd67f28a00067c8dbe859f1a2ed82321.gifv);
+  width:300px;
+  height:400px;
+  border:20px solid #0d0d0d;
+  box-sizing:border-box;
+  flex-shrink:0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(20%);
+  transition: filter 0.5s ease;
+  position: relative;
+}
+
+.imgrev::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00022e;
+  background-image: url("https://www.transparenttextures.com/patterns/broken-noise.png");
+  background-repeat: repeat;
+  opacity: 0.3; 
+  transition: opacity 0.5s ease;
+  pointer-events: none; 
+}
+
+
+.quoteup{
+  font-family: "Cinzel", serif;
+  font-size: 0.60em;
+  text-transform:uppercase;
+  color: #a0a0a0;
+  letter-spacing:2px;
+  padding:10px;
+  box-sizing:border-box;
+  line-height: 1.6;
+  border-top:1px solid #191919;
+  border-bottom:1px solid #191919;
+  margin-bottom:20px;
+  text-align: left;
+}
+
+.quoteup b{
+  color: var(--groups);
+  font-weight:bold;
+}
+  
+  .quoteund{
+  font-family: "Cinzel", serif;
+  font-size: 0.55em;
+  text-transform:uppercase;
+  color: #a0a0a0;
+  letter-spacing:2px;
+  padding:10px;
+  box-sizing:border-box;
+  line-height: 1.6;
+  border-top:1px solid #191919;
+  border-bottom:1px solid #191919;
+  margin-top:20px;
+  text-align: right;
+}
+
+.quoteund b{
+  color: var(--groups);
+  font-weight:bold;
+}
+
+.revbox2 name{
+  font-family: "Revnaruna";
+  color: var(--groups);
+  font-size: 130px;
+  line-height: 164px;
+  text-align: center;
+  z-index: 1;
+}
+
+
+.revbox2 name n{
+  -webkit-text-stroke: 1px var(--groups);
+  color:transparent;  
+}
+
+.revlinks{
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  justify-content: space-between;
+}
+
+.revlinks a{
+  width:50px;
+  height:50px;
+  background:#0d0d0d;
+  font-size: 25px;
+  line-height: 30px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color: var(--groups);
+  text-decoration:none;
+  transform:rotate(0deg);
+  transition:all ease-in-out .3s;
+}
+
+.revlinks a:hover{
+  background:#151515;
+  transform:rotate(-20deg);
+  transition:all ease-in-out .3s;
+}
+
+.revdatos {
+  display: block; 
+  margin-top: 20px;
+  z-index: 1;
+}
+
+.revdatos dato {
+  display: grid; 
+  grid-template-columns: 100px 1fr auto; 
+  align-items: center;
+  line-height: 2;
+  font-size: 0.8em; 
+  gap: 10px;
+}
+
+.revdatos dato m {
+  font-family: "Cinzel";
+  font-size: 1em;
+  color: var(--groups);
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1.1em; 
+  grid-column: 1; 
+  text-align: left; 
+  text-transform: bold;
+}
+
+.revdatos dato::after {
+  content: attr(data-runas);
+  font-family: "rune", serif;
+  color: #a0a0a0;
+  opacity: 0.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
+  font-size: 0.8em;
+  grid-column: 2;
+  display: flex;              
+  align-items: center;        
+  height: 1.2em;              
+  line-height: 1;             
+}
+
+
+
+.revdatos dato n {
+  color: #d1d1d1;
+  font-family: "EB Garamond", sans-serif;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  grid-column: 3;
+  text-align: right;   
+}
+
+
+.revmusic{
+  width:100%;
+  height:70px;
+  margin-top:10px;
+  border-top:1px solid #191919;
+  border-bottom:1px solid #191919;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:5px;
+  
+}
+
+.revmusic tit{
+  background:#191919;
+  font-family: "Cinzel", serif;
+  color: var(--groups);
+  position:absolute;
+  top:-40px;
+  left:800px;
+  padding:5px;
+  line-height:15px;
+  font-size:12px;
+}
+
+.revmusic music{
+  background:#0d0d0d;
+  padding:15px 10px;
+  box-sizing:border-box;
+  flex: 1;
+  color: #d1d1d1;
+  line-height:10px;
+  display:flex;
+  align-items:center;
+  justify-content:left;
+  gap:10px;
+}
+
+.revmusic music a{
+  font-family: "Cinzel", serif;
+  font-weight: 600;
+  color: var(--groups);
+  text-decoration:none;
+  display:block;
+  font-size:9.8px;
+}
+
+.revmusic music t{
+  font-family: "EB Garamond", sans-serif;
+  font-size: 0.68em;
+  margin-top:3px;
+  display:block;
+}
+
+.revmusic music i{
+  font-size:20px;
+  line-height:20px;
+   color: var(--groups);
+  margin-top:5px;
+}

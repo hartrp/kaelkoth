@@ -1,0 +1,250 @@
+
+@font-face {
+    font-family: 'Revfont1';
+    src: url(https://dl.dropbox.com/scl/fi/cwjzqy38sgnd0lcpi040y/Brighthorse-Regular.otf?rlkey=et0u2rjuwvquny07wjlpdf205&st=hgm4g7b2&dl=0l);
+}
+
+/* --- ESTRUCTURA --- */
+.revrelas {
+  width: 800px;
+  height: auto;
+  background: #111;
+  margin: 0px 40px;
+  padding: 20px;
+  box-sizing: border-box;
+  outline-offset: 10px;
+  outline: 1px solid #111;
+  display: block; 
+  position: relative;
+  z-index: 1;
+}
+
+.revrelas::before {
+  content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  background-image: url("https://i.pinimg.com/1200x/01/63/50/0163500abf6987cdc1e31352c5bdcc56.jpg");
+  background-size: cover; opacity: 0.15; z-index: -1; pointer-events: none;
+}
+
+.revrelascont {
+  width: 100%; 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px; margin-bottom: 10px;
+}
+
+/* --- TARJETA --- */
+.imgrela {
+  position: relative;
+  width: 175px;  
+  height: 280px;
+  background-color: #0d0d0d;
+  border: 10px solid #0d0d0d; 
+  box-sizing: border-box;
+  overflow: hidden;
+  box-shadow: 0 0 5px #000;
+}
+
+/* --- IMAGEN DE FONDO (AQUÍ ESTÁ EL CAMBIO) --- */
+.imgrela .bg-img {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  transition: filter 0.5s ease; 
+  
+  /* ESTADO NORMAL: B/N LIMPIO */
+  /* Hemos subido el brillo a 0.9 (antes 0.6) para que no sea oscura */
+  filter: grayscale(100%) brightness(0.7) contrast(1); 
+}
+
+/* --- ESTADO HOVER --- */
+.imgrela:hover .bg-img {
+  /* Al pasar el ratón se ilumina un poco más (1.1) */
+  filter: grayscale(100%) brightness(0.5) contrast(1.1); 
+}
+
+/* --- CAPA DE TINTE (ELIMINADA / INVISIBLE) --- */
+/* La dejamos definida pero con opacity 0 para que no coloree la imagen */
+.imgrela::before {
+  content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  mix-blend-mode: multiply; 
+  opacity: 0; /* ESTO QUITA EL COLOR DEL FILTRO */
+  z-index: 1; 
+  pointer-events: none;
+}
+
+
+/* --- EFECTO PULSO --- */
+.pulse-overlay {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  background: var(--npc); 
+  mix-blend-mode: normal; 
+  opacity: 0;
+  z-index: 1; pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+.imgrela[data-color="sakkrad"] .pulse-overlay { 
+    background: color-mix(in srgb, var(--sakkrad), transparent 40%); 
+}
+.imgrela[data-color="northel"] .pulse-overlay { 
+    background: color-mix(in srgb, var(--northel), transparent 40%);
+  }
+  .imgrela[data-color="bruma"] .pulse-overlay { 
+    background: color-mix(in srgb, var(--bruma), transparent 40%); 
+}
+.imgrela[data-color="sombrias"] .pulse-overlay { 
+    background: color-mix(in srgb, var(--sombrias), transparent 40%); 
+}
+.imgrela[data-color="alianza"] .pulse-overlay { 
+    background: color-mix(in srgb, var(--alianza), transparent 40%); 
+}
+.imgrela[data-color="imperio"] .pulse-overlay { 
+    background: color-mix(in srgb, var(--imperio), transparent 40%); 
+}
+.imgrela[data-color="daelarien"] .pulse-overlay { 
+    background: color-mix(in srgb, var(--daelarien), transparent 40%); 
+}
+.imgrela[data-color="shinzen"] .pulse-overlay { 
+    background: color-mix(in srgb, var(--shinzen), transparent 40%); 
+}
+.imgrela[data-color="noctum"] .pulse-overlay { 
+    background: color-mix(in srgb, var(--noctum), transparent 40%); 
+}
+.imgrela[data-color="vardarien"] .pulse-overlay { 
+    background: color-mix(in srgb, var(--vardarien), transparent 40%); 
+}
+.imgrela[data-color="dragones"] .pulse-overlay { 
+    background: color-mix(in srgb, var(--dragones), transparent 40%); 
+}
+
+.imgrela:hover .pulse-overlay {
+  opacity: 1;
+  animation: latido 1.5s infinite ease-in-out;
+}
+
+@keyframes latido {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+}
+
+/* --- CONTENIDO INTERNO --- */
+.rela-content {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  padding: 10px 5px; box-sizing: border-box;
+  opacity: 0;
+  z-index: 2;
+  transition: opacity 0.5s ease 0.2s;
+  display: flex; flex-direction: column; align-items: center;
+}
+
+.imgrela:hover .rela-content { opacity: 1; }
+
+.vertical-line { width: 1px; height: 20px; background: #fff; opacity: 0.6; margin: 5px auto; }
+
+.char-name {
+  font-family: 'Revfont1'; font-size: 2.2em; color: #fff;
+  text-align: center; margin: 0; line-height: 1; text-shadow: 2px 2px 4px #000;font-weight: normal; text-transform: none;
+}
+
+.char-desc {
+  width: 90%; height: 85px; overflow-y: auto;
+  font-family: sans-serif; font-size: 0.65rem; color: #eee;
+  text-align: justify; line-height: 1.4; margin: 5px 0; padding-right: 3px;
+  text-shadow: 1px 1px 2px #000;
+}
+.char-desc::-webkit-scrollbar { width: 2px; }
+.char-desc::-webkit-scrollbar-track { background: rgba(0,0,0,0.2); }
+.char-desc::-webkit-scrollbar-thumb { background: #fff; }
+
+.quoterel {
+  font-family: "Cinzel", serif; font-size: 0.5em; text-transform: uppercase; line-height: 1.2 !important;
+  color: #ccc; letter-spacing: 1px; padding: 5px 0; width: 100%;
+  text-align: center; border-top: 1px solid rgba(255,255,255,0.3);
+  margin-top: auto; text-shadow: 1px 1px 2px #000;
+}
+.quoterel b { color: #fff; font-weight: bold; }
+
+.relicons {
+  display: flex; justify-content: center; gap: 8px; margin-bottom: 5px;
+  font-size: 1.2em; color: #fff;
+}
+.relicons i { filter: drop-shadow(0px 2px 2px #000); }
+
+
+/* --- CITAS FUERA --- */
+.quoteup, .quoteund {
+  font-family: "Cinzel", serif; font-size: 0.65em; text-transform: uppercase;
+  color: #a0a0a0; letter-spacing: 2px; padding: 15px; box-sizing: border-box;
+  line-height: 1.6; width: 100%; display: block;
+}
+
+.quoteup { border-top: 1px solid #222; border-bottom: 1px solid #222; margin-bottom: 20px; text-align: left; }
+.quoteund { border-top: 1px solid #222; border-bottom: 1px solid #222; margin-top: 20px; text-align: right; }
+.quoteup b, .quoteund b { font-weight: bold; color: var(--northel); }
+
+/* --- TOOLTIPS (VERSIÓN SEGURA) --- */
+
+/* Configuración base del icono */
+/* --- TOOLTIPS ELEGANTES (Cursor Normal) --- */
+
+.relicons i {
+  position: relative; 
+  cursor: default; /* Cursor normal (flecha), mucho más limpio */
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+/* El resto del CSS de los tooltips (::after) déjalo igual que te lo pasé antes */
+
+/* Colorear icono al pasar el ratón (Opcional) */
+.imgrela[data-color="sakkrad"] .relicons i:hover { color: var(--sakkrad); }
+.imgrela[data-color="northel"] .relicons i:hover { color: var(--northel); }
+.imgrela[data-color="bruma"] .relicons i:hover { color: var(--bruma); }
+.imgrela[data-color="sombrias"] .relicons i:hover { color: var(--sombrias); }
+.imgrela[data-color="alianza"] .relicons i:hover { color: var(--alianza); }
+.imgrela[data-color="imperio"] .relicons i:hover { color: var(--imperio); }
+.imgrela[data-color="daelarien"] .relicons i:hover { color: var(--daelarien); }
+.imgrela[data-color="shinzen"] .relicons i:hover { color: var(--shinzen); }
+.imgrela[data-color="noctum"] .relicons i:hover { color: var(--noctum); }
+.imgrela[data-color="vardarien"] .relicons i:hover { color: var(--vardarien); }
+.imgrela[data-color="dragones"] .relicons i:hover { color: var(--dragones); }
+
+
+
+/* EL CARTELITO (Solo usamos ::after) */
+.relicons i::after {
+  content: attr(aria-label); /* Coge el texto del HTML */
+  
+  position: absolute;
+  bottom: 100%; /* Justo encima del icono */
+  left: 50%;
+  transform: translateX(-50%) translateY(-5px); /* Centrado y un poco separado */
+  
+  /* Diseño de la cajita */
+  background-color: #000; 
+  border: 1px solid #444;
+  color: #fff;
+  
+  font-family: sans-serif;
+  font-size: 9px;
+  font-weight: bold;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding: 3px 6px;
+  border-radius: 3px;
+  
+  /* Oculto por defecto */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 10;
+}
+
+/* AL HACER HOVER */
+.relicons i:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-10px); /* Pequeña animación hacia arriba */
+}
