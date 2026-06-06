@@ -147,7 +147,7 @@
   width:50px;
   height:50px;
   background:#0d0d0d;
-  font-size: 1.2em;
+  font-size: 25px;
   line-height: 30px;
   display:flex;
   align-items:center;
@@ -275,7 +275,7 @@
 }
 
 .revmusic music i{
-  font-size:20px;
+  font-size:35px;
   line-height:20px;
    color: var(--groups);
   margin-top:5px;
