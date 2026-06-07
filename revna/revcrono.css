@@ -14,9 +14,18 @@
 }
 
 /* --- ESTRUCTURA GENERAL --- */
-.revtracker { width: 800px; height: auto; background: #111; margin: 50px auto; padding: 20px; box-sizing: border-box; outline-offset: 10px; outline: 1px solid #111; position: relative; z-index: 1; }
+.revtracker { 
+  width: 800px; min-height: 500px; background: #111; margin: 50px auto; 
+  padding: 20px; box-sizing: border-box; outline-offset: 10px; 
+  outline: 1px solid #111; position: relative; z-index: 1; 
+  display: flex; flex-direction: column;
+}
 .revtracker::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url("https://i.pinimg.com/1200x/01/63/50/0163500abf6987cdc1e31352c5bdcc56.jpg"); background-size: cover; background-position: center; opacity: 0.15; z-index: -1; pointer-events: none; }
+
+/* --- CITAS --- */
 .revtracker .quoteup, .revtracker .quoteund { font-family: "Cinzel", serif; font-size: 0.65em; text-transform: uppercase; color: #a0a0a0; letter-spacing: 2px; padding: 15px; border-top: 1px solid #191919; border-bottom: 1px solid #191919; }
+.revtracker .quoteup { margin-bottom: 20px; text-align: left; }
+.revtracker .quoteund { margin-top: auto; text-align: right; }
 .revtracker b { color: var(--groups); }
 
 /* --- PESTAÑAS --- */
@@ -31,7 +40,8 @@ input#trk-pres:checked ~ .tracker-nav label[for="trk-pres"] i,
 input#trk-past:checked ~ .tracker-nav label[for="trk-past"] i, 
 input#trk-plots:checked ~ .tracker-nav label[for="trk-plots"] i { color: var(--groups); }
 
-/* --- CONTENIDO DE TEMAS --- */
+/* --- CONTENIDO --- */
+.tracker-body { flex-grow: 1; }
 .trk-content { display: none; height: 400px; overflow-y: auto; padding-right: 10px; }
 input#trk-pres:checked ~ .tracker-body #c-pres, 
 input#trk-past:checked ~ .tracker-body #c-past, 
@@ -44,44 +54,25 @@ input#trk-plots:checked ~ .tracker-body #c-plots { display: block; animation: fa
 .season-threads { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
 .thread-item { display: flex; align-items: flex-start; gap: 10px; background: #151515; padding: 8px 10px; border: 1px solid #191919; transition: all 0.3s ease; }
 .thread-item:hover { background: #1a1a1a; transform: translateY(-2px); border-color: #222; }
-
-/* --- ICONOS Y TEXTOS --- */
 .thread-icon { width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 1px solid #333; font-size: 12px; flex-shrink: 0; margin-top: 3px; }
 .status-open .thread-icon { color: var(--groups); border-color: var(--groups); }
 .status-closed .thread-icon { color: #555; border-color: #333; }
 .thread-info a { font-family: "Cinzel", serif; font-size: 0.85em; font-weight: 600; color: #fff; text-decoration: none; text-transform: uppercase; display: block; }
 .thread-info info { font-family: "EB Garamond", serif; font-size: 0.8em; color: #a0a0a0; font-style: italic; display: block; line-height: 1.4; margin-top: 2px; }
-.thread-info info span { display: inline-block; }
 
-/* --- TRAMAS Y ETIQUETAS --- */
+/* --- TRAMAS Y COLORES --- */
 .t-tags { display: flex; gap: 4px; margin-top: 5px; flex-wrap: wrap; }
 .tag { background: #0d0d0d; border: 1px solid #222; color: #888; font-family: "Cinzel", serif; font-size: 0.5em; text-transform: uppercase; padding: 2px 4px; border-radius: 3px; }
-.plots-list { display: flex; flex-direction: column; gap: 10px; }
-.plot-item { background: #151515; border: 1px solid #191919; padding: 12px; border-left: 3px solid #333; }
+.plot-item { background: #151515; border: 1px solid #191919; padding: 12px; border-left: 3px solid #333; margin-bottom: 10px; }
 .plot-tag { font-family: "Cinzel", serif; color: #fff; font-size: 0.9em; margin-bottom: 5px; text-transform: uppercase; display: flex; align-items: center; }
 .plot-desc { font-family: sans-serif; font-size: 0.7rem; color: #bbb; line-height: 1.5; text-align: justify; }
-
-/* --- COLORES FACCIÓN --- */
 .c-sakkrad { color: var(--sakkrad); font-weight: bold; } .c-northel { color: var(--northel); font-weight: bold; }
 .c-bruma { color: var(--bruma); font-weight: bold; } .c-sombrias { color: var(--sombrias); font-weight: bold; }
 .c-alianza { color: var(--alianza); font-weight: bold; } .c-imperio { color: var(--imperio); font-weight: bold; }
 .c-noctum { color: var(--noctum); font-weight: bold; } .c-npc { color: #888; font-weight: bold; }
 
-/* --- SCROLLBAR PERSONALIZADA (Elegante y compacta) --- */
-.trk-content::-webkit-scrollbar { 
-  width: 5px; /* Un poco más grueso para que sea manejable */
-}
-
-.trk-content::-webkit-scrollbar-track { 
-  background: #0d0d0d; /* Fondo oscuro igual que la caja */
-}
-
-.trk-content::-webkit-scrollbar-thumb { 
-  background: var(--groups); /* Color de tu facción */
-  border-radius: 10px;
-  border: 1px solid #111;
-}
-
-.trk-content::-webkit-scrollbar-thumb:hover { 
-  background: #fff; /* Se vuelve blanco al pasar el ratón para indicar que es interactivo */
-}
+/* --- SCROLLBAR --- */
+.trk-content::-webkit-scrollbar { width: 5px; }
+.trk-content::-webkit-scrollbar-track { background: #0d0d0d; }
+.trk-content::-webkit-scrollbar-thumb { background: var(--groups); border-radius: 10px; border: 1px solid #111; }
+.trk-content::-webkit-scrollbar-thumb:hover { background: #fff; }
