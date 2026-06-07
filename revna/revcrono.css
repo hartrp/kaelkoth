@@ -63,8 +63,8 @@ input#trk-plots:checked ~ .tracker-body #c-plots { display: block; animation: fa
 .thread-info a { font-family: "Cinzel", serif; font-size: 0.85em; font-weight: 600; color: #fff; text-decoration: none; text-transform: uppercase; display: block; line-height: 1.2; margin: 0; }
 .thread-info info { font-family: "EB Garamond", serif; font-size: 0.8em; color: #a0a0a0; font-style: italic; display: block; line-height: 1.2; margin: 2px 0; }
 
-/* --- ETIQUETAS (AJUSTADAS EN ALTURA) --- */
-.t-tags { display: flex !important; gap: 6px !important; margin: 5px 0 0 0 !important; padding: 0 !important; flex-wrap: wrap !important; align-items: center !important; }
+/* --- ETIQUETAS (Margen superior aumentado) --- */
+.t-tags { display: flex !important; gap: 6px !important; margin: 8px 0 0 0 !important; padding: 0 !important; flex-wrap: wrap !important; align-items: center !important; }
 .tag { 
   background: #0d0d0d; border: 1px solid #222; color: #888; 
   font-family: "Cinzel", serif; font-size: 0.55em; text-transform: uppercase; 
