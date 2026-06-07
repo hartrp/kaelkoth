@@ -66,3 +66,22 @@ input#trk-plots:checked ~ .tracker-body #c-plots { display: block; animation: fa
 .c-bruma { color: var(--bruma); font-weight: bold; } .c-sombrias { color: var(--sombrias); font-weight: bold; }
 .c-alianza { color: var(--alianza); font-weight: bold; } .c-imperio { color: var(--imperio); font-weight: bold; }
 .c-noctum { color: var(--noctum); font-weight: bold; } .c-npc { color: #888; font-weight: bold; }
+
+/* --- SCROLLBAR PERSONALIZADA (Elegante y compacta) --- */
+.trk-content::-webkit-scrollbar { 
+  width: 5px; /* Un poco más grueso para que sea manejable */
+}
+
+.trk-content::-webkit-scrollbar-track { 
+  background: #0d0d0d; /* Fondo oscuro igual que la caja */
+}
+
+.trk-content::-webkit-scrollbar-thumb { 
+  background: var(--groups); /* Color de tu facción */
+  border-radius: 10px;
+  border: 1px solid #111;
+}
+
+.trk-content::-webkit-scrollbar-thumb:hover { 
+  background: #fff; /* Se vuelve blanco al pasar el ratón para indicar que es interactivo */
+}
