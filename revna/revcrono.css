@@ -1,0 +1,68 @@
+/* --- CARGA GLOBAL DE ICONOS --- */
+@import url('https://hartrp.github.io/gameicons-font/css/game-icons.css');
+
+:root {
+  --groups: #4C6D7B; --sakkrad: #91728D; --northel: #4c6d7b; --bruma: #4c7264;
+  --sombrias: #782E2E; --alianza: #8A7B5E; --imperio: #85613A; --noctum: #685B7D;
+}
+
+/* --- ICONOS (Forzado de carga) --- */
+[class^="gi-"], [class*=" gi-"] {
+    display: inline-block; font-family: 'Game-Icons' !important;
+    font-style: normal; font-weight: normal; font-variant: normal;
+    text-transform: none; line-height: 1; -webkit-font-smoothing: antialiased;
+}
+
+/* --- ESTRUCTURA GENERAL --- */
+.revtracker { width: 800px; height: auto; background: #111; margin: 50px auto; padding: 20px; box-sizing: border-box; outline-offset: 10px; outline: 1px solid #111; position: relative; z-index: 1; }
+.revtracker::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url("https://i.pinimg.com/1200x/01/63/50/0163500abf6987cdc1e31352c5bdcc56.jpg"); background-size: cover; background-position: center; opacity: 0.15; z-index: -1; pointer-events: none; }
+.revtracker .quoteup, .revtracker .quoteund { font-family: "Cinzel", serif; font-size: 0.65em; text-transform: uppercase; color: #a0a0a0; letter-spacing: 2px; padding: 15px; border-top: 1px solid #191919; border-bottom: 1px solid #191919; }
+.revtracker b { color: var(--groups); }
+
+/* --- PESTAÑAS --- */
+input[name="revtrack"] { display: none; }
+.tracker-nav { display: flex; justify-content: center; gap: 40px; margin-bottom: 20px; }
+.tracker-nav label { font-family: "Cinzel", serif; font-size: 0.8em; color: #666; text-transform: uppercase; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; }
+.tracker-nav label i { font-size: 1.5em; color: #444; }
+input#trk-pres:checked ~ .tracker-nav label[for="trk-pres"], 
+input#trk-past:checked ~ .tracker-nav label[for="trk-past"], 
+input#trk-plots:checked ~ .tracker-nav label[for="trk-plots"] { color: #fff; border-bottom: 2px solid var(--groups); }
+input#trk-pres:checked ~ .tracker-nav label[for="trk-pres"] i, 
+input#trk-past:checked ~ .tracker-nav label[for="trk-past"] i, 
+input#trk-plots:checked ~ .tracker-nav label[for="trk-plots"] i { color: var(--groups); }
+
+/* --- CONTENIDO DE TEMAS --- */
+.trk-content { display: none; height: 400px; overflow-y: auto; padding-right: 10px; }
+input#trk-pres:checked ~ .tracker-body #c-pres, 
+input#trk-past:checked ~ .tracker-body #c-past, 
+input#trk-plots:checked ~ .tracker-body #c-plots { display: block; animation: fadeUp 0.5s ease; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+/* --- LISTADO Y CUADRÍCULA --- */
+.trk-season { margin-bottom: 20px; }
+.season-head { font-family: "Cinzel", serif; color: #fff; background: #0d0d0d; border-left: 3px solid var(--groups); padding: 6px 12px; margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+.season-threads { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.thread-item { display: flex; align-items: flex-start; gap: 10px; background: #151515; padding: 8px 10px; border: 1px solid #191919; transition: all 0.3s ease; }
+.thread-item:hover { background: #1a1a1a; transform: translateY(-2px); border-color: #222; }
+
+/* --- ICONOS Y TEXTOS --- */
+.thread-icon { width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 1px solid #333; font-size: 12px; flex-shrink: 0; margin-top: 3px; }
+.status-open .thread-icon { color: var(--groups); border-color: var(--groups); }
+.status-closed .thread-icon { color: #555; border-color: #333; }
+.thread-info a { font-family: "Cinzel", serif; font-size: 0.85em; font-weight: 600; color: #fff; text-decoration: none; text-transform: uppercase; display: block; }
+.thread-info info { font-family: "EB Garamond", serif; font-size: 0.8em; color: #a0a0a0; font-style: italic; display: block; line-height: 1.4; margin-top: 2px; }
+.thread-info info span { display: inline-block; }
+
+/* --- TRAMAS Y ETIQUETAS --- */
+.t-tags { display: flex; gap: 4px; margin-top: 5px; flex-wrap: wrap; }
+.tag { background: #0d0d0d; border: 1px solid #222; color: #888; font-family: "Cinzel", serif; font-size: 0.5em; text-transform: uppercase; padding: 2px 4px; border-radius: 3px; }
+.plots-list { display: flex; flex-direction: column; gap: 10px; }
+.plot-item { background: #151515; border: 1px solid #191919; padding: 12px; border-left: 3px solid #333; }
+.plot-tag { font-family: "Cinzel", serif; color: #fff; font-size: 0.9em; margin-bottom: 5px; text-transform: uppercase; display: flex; align-items: center; }
+.plot-desc { font-family: sans-serif; font-size: 0.7rem; color: #bbb; line-height: 1.5; text-align: justify; }
+
+/* --- COLORES FACCIÓN --- */
+.c-sakkrad { color: var(--sakkrad); font-weight: bold; } .c-northel { color: var(--northel); font-weight: bold; }
+.c-bruma { color: var(--bruma); font-weight: bold; } .c-sombrias { color: var(--sombrias); font-weight: bold; }
+.c-alianza { color: var(--alianza); font-weight: bold; } .c-imperio { color: var(--imperio); font-weight: bold; }
+.c-noctum { color: var(--noctum); font-weight: bold; } .c-npc { color: #888; font-weight: bold; }
