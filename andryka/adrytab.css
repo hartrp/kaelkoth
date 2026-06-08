@@ -1,0 +1,198 @@
+/* ==========================================================================
+   1. IMPORTACIÓN DE FUENTES (CDNFonts)
+   ========================================================================== */
+@import url('https://fonts.cdnfonts.com/css/chomsky');
+@import url('https://fonts.cdnfonts.com/css/grusskarten-gotisch');
+@import url('https://fonts.cdnfonts.com/css/bodoni-twelve-sc-itc-tt');
+@import url('https://fonts.cdnfonts.com/css/analogist');
+@import url('https://fonts.cdnfonts.com/css/chapaza');
+@import url('https://fonts.cdnfonts.com/css/bbt');
+
+
+
+/* ==========================================================================
+   3. ESTILOS: NUEVO POST ANDRY
+   ========================================================================== */
+.andry-post {
+  width: 440px;
+  margin: 0 auto 50px auto;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  color: #cbcbcb;
+  line-height: 25px;
+}
+
+.andry-title {
+  margin-top: 50px;
+  margin-bottom: 10px;
+  font: 600 35px 'Playfair Display', serif;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: -3px;
+}
+
+.andry-subtitle {
+  color: var(--dbckg5);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.andry-quote {
+  color: #434343;
+  font-size: 21px;
+  line-height: 20px;
+  width: 420px;
+  margin: auto;
+  text-align: center;
+  font-style: italic;
+}
+
+.andry-letter {
+  float: left;
+  font: 110px 'Grusskarten Gotisch', sans-serif;
+  width: 80px;
+  height: 115px;
+  text-align: center;
+  margin-top: 0px;
+  margin-block: auto;
+  padding-right: 20px;
+  background: -webkit-linear-gradient(var(--groups), #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ==========================================================================
+   4. ESTILOS: ESTRUCTURA FTALE
+   ========================================================================== */
+.ftale {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  line-height: normal;
+  background-color: transparent;
+  padding: 50px 0;
+  filter: sepia(50%);
+  opacity: 90%;
+  box-shadow: 4px 4px 6px;
+}
+
+.ftale-1, .ftale-5 {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  font-size: 9px;
+  text-transform: uppercase;
+  font-family: 'Bodoni Twelve SC ITC TT', sans-serif;
+  letter-spacing: 1px;
+}
+
+.ftale-2, .ftale-4 {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: 0 auto 30px auto;
+}
+
+.ftale-2a {
+  display: flex;
+  flex-direction: column;
+  margin: auto 0 auto auto;
+  width: 220px;
+  padding-right: 5px;
+}
+
+.ftale-2a1 {
+  font-size: 65px;
+  font-family: 'Chomsky', sans-serif;
+  letter-spacing: -4px;
+  text-align: right;
+  line-height: 0.6em;
+}
+
+.ftale-2a2 {
+  text-align: right;
+  text-transform: uppercase;
+  font-size: 11px;
+  line-height: 0.9em;
+  margin-top: 5px;
+  font-family: 'Analogist', sans-serif;
+}
+
+.ftale-2b {
+  background-size: cover;
+  background-position: center;
+  background-image: var(--cstl-tp);
+  width: 200px;
+  height: 300px;
+  margin: auto auto auto 0;
+}
+
+.ftale-3 {
+  margin: 20px auto 60px;
+  width: 60%;
+  text-align: center;
+  line-height: 0.7em;
+  font-size: 12px;
+  font-family: 'Chapaza', sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  padding: 20px 0;
+}
+
+.ftale-txt {
+  width: 60%;
+  text-align: justify;
+  margin: 0px auto 50px;
+  line-height: 1em;
+  font-size: 11px;
+  font-family: Georgia, serif;
+}
+
+.ftale-txt p {
+  font-family: 'Grusskarten Gotisch', sans-serif;
+  font-size: 80px;
+  float: left;
+  padding: 0px 15px 0px 0;
+  margin-bottom: -15px;
+  margin-top: -20px;
+}
+
+.ftale-4a {
+  background-size: cover;
+  background-position: center;
+  background-image: var(--cstl-bt);
+  width: 200px;
+  height: 300px;
+  margin: auto 0 auto auto;
+}
+
+.ftale-4b {
+  display: flex;
+  flex-direction: column;
+  margin: auto auto auto 0;
+  width: 200px;
+  text-align: left;
+  line-height: 0.9em;
+  font-size: 12px;
+  font-style: italic;
+  font-family: 'BBT', sans-serif;
+}
+
+.gnomo {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 8px;
+  text-align: center;
+  color: #E86B82;
+  font-family: Verdana, sans-serif;
+  margin-top: 5px;
+  letter-spacing: 2px;
+}
