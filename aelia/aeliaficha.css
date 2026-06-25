@@ -1,0 +1,126 @@
+@font-face {
+  font-family: 'Aelia';
+  src: url('https://hartrp.github.io/kaelkoth/fonts/monkton-incised-shadow.otf') format('opentype');
+}
+
+.ael-open {
+  width: 200px;
+  margin: 30px auto;
+  text-align: center;
+  position: relative;
+}
+.ael-mask {
+  width: 200px;
+  margin: 0 auto;
+  display: block;
+  filter: sepia(0.8) saturate(0.9) brightness(0.5) contrast(1.2);
+  opacity: 0.85;
+}
+.ael-drip {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, #85613A, transparent);
+  margin: 0 auto;
+}
+.ael-word {
+  font-family: 'Aelia', serif;
+  font-size: 48px;
+  color: #85613A;
+  letter-spacing: 15px;
+  line-height: 1;
+  text-transform: uppercase;
+  margin: 10px 0 0px 0;
+  text-shadow: 0 0 20px rgba(133,97,58,0.3);
+}
+.ael-spqr {
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  color: #555;
+  letter-spacing: 7px;
+  width: 160px;
+  margin: 0 auto 16px auto;
+  text-align: justify;
+}
+.ael-spqr b { color: #85613A; }
+
+.ael-name {
+  text-align: center;
+  margin: 20px auto;
+}
+.ael-name a {
+  font-family: 'Aelia', serif;
+  font-weight: normal;
+  font-size: 60px;
+  color: #85613A;
+  letter-spacing: 2px;
+  text-shadow: 0 0 20px rgba(133,97,58,0.3);
+  text-decoration: none;
+}
+
+.ael {
+  width: 200px;
+  margin: 24px auto;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+.ael-title {
+  font-family: 'Aelia', serif;
+  font-size: 36px;
+  color: #85613A;
+  text-align: center;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  text-shadow: 0 0 20px rgba(133,97,58,0.3);
+}
+.ael-desc {
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  color: #777;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  line-height: 1.8;
+  text-align: justify;
+}
+.ael-desc b { color: #85613A; font-weight: 600; }
+
+/* DATOS */
+.ael-data {
+  width: 400px;
+  margin: 30px auto;
+}
+.ael-data-sep {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.ael-data-sep span {
+  height: 1px;
+  width: 120px;
+  background: linear-gradient(to right, transparent, rgba(133,97,58,0.6), transparent);
+}
+.ael-data-sep i {
+  color: #85613A;
+  font-size: 16px;
+}
+.ael-data-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.ael-data-item i {
+  color: #85613A;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+.ael-data-item p {
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  color: #888;
+  letter-spacing: 0.5px;
+  line-height: 1.6;
+  margin: 0;
+}
