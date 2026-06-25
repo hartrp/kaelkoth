@@ -46,6 +46,7 @@
 .ael-name {
   text-align: center;
   margin: 0 auto -5px auto;
+  margin-bottom: 0px;
 }
 .ael-name a {
   font-family: 'Aelia', serif;
