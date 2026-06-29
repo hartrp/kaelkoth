@@ -149,3 +149,101 @@
   line-height: 1.6;
   margin: 0;
 }
+
+/* VXOR TE SALVTAT */
+
+.ael-note {
+  width: 440px;
+  margin: 50px auto;
+  box-sizing: border-box;
+}
+
+/* Separador superior */
+.ael-note-sep {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 12px;
+}
+
+.ael-note-sep span {
+  width: 120px;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(133,97,58,.6),
+    transparent
+  );
+}
+
+/* Máscara */
+.ael-note-mask {
+  width: 68px;
+  height: auto;
+  display: block;
+  opacity: .75;
+  filter:
+    sepia(.8)
+    saturate(.9)
+    brightness(.55)
+    contrast(1.2);
+}
+
+/* Título */
+.ael-note-title {
+  font-family: 'Aelia', serif;
+  font-size: 30px;
+  color: #85613A;
+  text-align: center;
+  letter-spacing: 5px;
+  margin: 10px 0 26px;
+  text-shadow: 0 0 16px rgba(133,97,58,.25);
+}
+
+/* Cada nota */
+.ael-note-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+/* Laurel */
+.ael-note-item i {
+  color: #85613A;
+  font-size: 18px;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+/* Texto */
+.ael-note-item p {
+  margin: 0;
+  font-family: 'Spectral', serif;
+  font-size: 14px;
+  line-height: 1.9;
+  color: #8a8a8a;
+  text-align: justify;
+}
+
+.ael-note-item p b {
+  color: #85613A;
+  font-weight: 600;
+}
+
+/* Separador inferior opcional */
+.ael-note::after {
+  content: '';
+  display: block;
+  width: 180px;
+  height: 1px;
+  margin: 30px auto 0;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(133,97,58,.5),
+    transparent
+  );
+}
