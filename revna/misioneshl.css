@@ -12,11 +12,11 @@ body {
    PANEL DE ACTUALIZACIÓN DE LA MISIÓN 
    ========================================= */
 .rvz_board_wrapper {
-    --progreso-barra: 35%;       /* <- Modifica el % para rellenar la barra */
-    --progreso-texto: "7 / 20";  /* <- Texto numérico del contador */
+    --progreso-barra: 0%;       /* <- Modifica el % para rellenar la barra */
+    --progreso-texto: "0 / 20";  /* <- Texto numérico del contador */
 
     /* OBJETIVOS: Cambia 'none' por 'block' para rellenar el recuadro con color */
-    --check-1: block;   /* Objetivo 1 (5 ofrendas) */
+    --check-1: none;   /* Objetivo 1 (5 ofrendas) */
     --check-2: none;    /* Objetivo 2 (10 ofrendas) */
     --check-3: none;    /* Objetivo 3 (15 ofrendas) */
     --check-4: none;    /* Objetivo 4 (20+ ofrendas) */
