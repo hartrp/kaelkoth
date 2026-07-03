@@ -1,13 +1,3 @@
-body {
-    background: #000;
-    background: url(https://2img.net/i.imgur.com/kIRWOin.png) top center / cover fixed no-repeat;
-}
-
-@font-face {
-    font-family: 'Highborne';
-    src: url('https://furraloca.github.io/kaelkothoficial/Highborne-Blackletter.otf') format('opentype');
-}
-
 /* =========================================
    PANEL DE ACTUALIZACIÓN DE LA MISIÓN 
    ========================================= */
