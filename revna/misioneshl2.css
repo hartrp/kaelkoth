@@ -1,0 +1,518 @@
+/* =========================================
+   PANEL DE ACTUALIZACIÓN DE LA MISIÓN 
+   ========================================= */
+.rvz_board_wrapper {
+    --progreso-barra: 0%;       /* <- Modifica el % para rellenar la barra */
+    --progreso-texto: "0 / 4;  /* <- Texto numérico del contador */
+
+    /* OBJETIVOS: Cambia 'none' por 'block' para rellenar el recuadro con color */
+    --check-1: block;   /* Objetivo 1 (5 ofrendas) */
+    --check-2: none;    /* Objetivo 2 (10 ofrendas) */
+    --check-3: none;    /* Objetivo 3 (15 ofrendas) */
+    --check-4: none;    /* Objetivo 4 (20+ ofrendas) */
+}
+
+/* =========================================
+   ESTRUCTURA DEL TABLÓN
+   ========================================= */
+.rvz_board_wrapper {
+    width: 750px;
+    max-width: 100%;
+    margin: 40px auto;
+    background: #0d0c11; /* Color de papel oscuro */
+    border: 1px solid #231e2d;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.9);
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* BANNER SUPERIOR CON EL NUEVO GIF DE LA LUNA DE SANGRE */
+.rvz_board_banner {
+    height: 180px; 
+    background: linear-gradient(to right, #0d0c11 0%, transparent 35%, transparent 65%, #0d0c11 100%),
+                linear-gradient(to bottom, rgba(13,12,17,0.1) 0%, rgba(13,12,17,0.5) 60%, #0d0c11 100%),
+                url('https://i.pinimg.com/originals/88/37/bc/8837bcb0a177950604c8747b131141c7.gif') center 40% / cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #1a1622;
+}
+
+.rvz_board_title {
+    font-family: 'Highborne', serif;
+    font-size: 38px;
+    color: #fff;
+    text-shadow: 2px 2px 4px #000, 0 0 10px rgba(104,91,125,0.8);
+    margin: 0 0 8px 0;
+    line-height: 1;
+}
+
+.rvz_board_subtitle {
+    font-family: "Cinzel", serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #a395ba;
+    background: rgba(13,12,17,0.95);
+    padding: 4px 14px;
+    border: 1px solid #685B7D;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.8);
+}
+
+/* METADATOS HORIZONTALES */
+.rvz_board_meta {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 12px 0;
+    background: #09080b;
+    border-bottom: 1px solid #1a1622;
+}
+
+.rvz_board_meta span {
+    font-family: "Cinzel", serif;
+    font-size: 10px;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.rvz_board_meta i { color: #685B7D; font-size: 13px; }
+
+/* CUERPO DEL DOCUMENTO */
+.rvz_board_content {
+    padding: 25px 35px 35px 35px;
+    position: relative;
+    overflow: hidden;
+}
+
+.rvz_board_watermark {
+    position: absolute;
+    bottom: -10%;
+    right: -5%;
+    font-size: 350px;
+    color: rgba(104, 91, 125, 0.04);
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* TEXTO DE AMBIENTACIÓN */
+.rvz_board_desc {
+    display: flex;
+    gap: 15px;
+    background: rgba(15, 14, 20, 0.6);
+    border-left: 3px solid #685B7D;
+    padding: 20px;
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 2;
+}
+
+.rvz_board_desc i {
+    font-size: 24px;
+    color: #685B7D;
+    margin-top: 2px;
+}
+
+.rvz_desc_text p {
+    font-family: "Gideon Roman", serif;
+    font-size: 14px;
+    color: #aaa;
+    line-height: 1.6;
+    margin: 0 0 12px 0;
+    text-align: justify;
+}
+.rvz_desc_text p:last-child { margin-bottom: 0; }
+
+/* ESTILOS DE LINKS Y NEGRITAS (LILA SUAVE) */
+.rvz_board_wrapper a {
+    color: #a395ba;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.rvz_board_wrapper a:hover {
+    color: #e2dcf0; /* Un lila más clarito al pasar el ratón */
+    text-shadow: 0 0 5px rgba(163, 149, 186, 0.5);
+}
+
+.rvz_desc_text strong,
+.rvz_rules_scroll strong { 
+    color: #a395ba; 
+    font-weight: bold; 
+}
+
+/* GRID DE 2 COLUMNAS */
+.rvz_board_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    position: relative;
+    z-index: 2;
+}
+
+.rvz_board_panel {
+    background: #09080c;
+    border: 1px solid #16131c;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.rvz_panel_title {
+    font-family: "Cinzel", serif;
+    font-size: 11px;
+    color: #a395ba; /* Cambiado al lila suave */
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    border-bottom: 1px solid #1a1622;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.rvz_panel_title i { color: #685B7D; }
+
+/* CHECKLIST DE OBJETIVOS */
+.rvz_msn_checklist {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-grow: 1;
+}
+
+.rvz_msn_checklist li {
+    font-family: "Gideon Roman", serif;
+    font-size: 13px;
+    color: #999;
+    display: flex;
+    align-items: center;
+    background: rgba(255,255,255,0.02);
+    padding: 6px 10px;
+    border: 1px solid transparent;
+    transition: 0.2s;
+}
+
+.rvz_msn_checklist li:hover { background: rgba(255,255,255,0.04); border-color: #231e2d; color: #ccc; }
+
+.rvz_check {
+    width: 12px; height: 12px;
+    border: 1px solid #444;
+    margin-right: 12px;
+    background: #000;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.rvz_check::after {
+    content: '';
+    width: 8px; height: 8px;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background: #685B7D;
+    box-shadow: 0 0 5px #685B7D;
+}
+
+.rvz_check.c1::after { display: var(--check-1); }
+.rvz_check.c2::after { display: var(--check-2); }
+.rvz_check.c3::after { display: var(--check-3); }
+.rvz_check.c4::after { display: var(--check-4); }
+.rvz_check:has(+ .c1::after), .rvz_check.c1 { border-color: #685B7D; }
+.rvz_check.c2 { border-color: #685B7D; }
+.rvz_check.c3 { border-color: #685B7D; }
+.rvz_check.c4 { border-color: #685B7D; }
+
+/* BARRA DE PROGRESO INTEGRADA */
+.rvz_mini_progress {
+    background: #050406;
+    border: 1px solid #16131c;
+    padding: 12px;
+}
+
+.rvz_prog_head {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Cinzel", serif;
+    font-size: 9px;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.rvz_msn_counter::after { content: var(--progreso-texto); color: #a395ba; font-weight: bold; } /* Cambiado al lila suave */
+
+.rvz_prog_bar { width: 100%; height: 6px; background: #111; border-radius: 3px; overflow: hidden; }
+.rvz_prog_fill { height: 100%; width: var(--progreso-barra); background: #685B7D; box-shadow: 0 0 10px #685B7D; transition: 0.5s ease; }
+
+/* RECOMPENSAS COMPACTAS */
+.rvz_loot_compact {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.rvz_loot_item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(90deg, rgba(104,91,125,0.15) 0%, transparent 100%);
+    border-left: 2px solid #685B7D;
+    padding: 8px 12px;
+    font-family: "Cinzel", serif;
+    font-size: 11px;
+    color: #e2dcf0;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+.rvz_loot_item i { font-size: 20px; color: #a395ba; }
+
+/* SCROLL DE NORMAS */
+.rvz_rules_scroll {
+    max-height: 125px; 
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.rvz_rules_scroll::-webkit-scrollbar { width: 4px; }
+.rvz_rules_scroll::-webkit-scrollbar-track { background: #050406; }
+.rvz_rules_scroll::-webkit-scrollbar-thumb { background: #372d44; border-radius: 2px; }
+.rvz_rules_scroll::-webkit-scrollbar-thumb:hover { background: #685B7D; }
+
+.rvz_rules_scroll ul {
+    margin: 0; padding-left: 15px;
+    display: flex; flex-direction: column; gap: 6px;
+}
+
+.rvz_rules_scroll li {
+    font-family: "Gideon Roman", serif;
+    font-size: 12px;
+    color: #777;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+/* =========================================
+   CARTAS DE PERSONAJE (ESTILO ROL / DARK FANTASY)
+   ========================================= */
+.rvz_participants_rpg_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.rvz_char_card {
+    position: relative;
+    height: 130px; /* Un marco amplio y apaisado */
+    background: #050406;
+    border: 1px solid #231e2d;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+    border-radius: 3px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* Filigrana o marco interno para darle empaque de rol */
+.rvz_char_card::before {
+    content: '';
+    position: absolute;
+    top: 4px; left: 4px; right: 4px; bottom: 4px;
+    border: 1px solid rgba(104, 91, 125, 0.2);
+    z-index: 3;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+
+.rvz_char_card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%; /* Enfoca la imagen hacia los rostros */
+    /* Filtro sombrío: apaga los colores y da un aire añejo y dramático */
+    filter: grayscale(70%) sepia(15%) brightness(0.6) contrast(1.2);
+    transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Placa del nombre que emerge de las sombras inferiores */
+.rvz_char_nameplate {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(9, 8, 12, 1) 0%, rgba(9, 8, 12, 0.9) 40%, transparent 100%);
+    padding: 30px 10px 12px 10px;
+    text-align: center;
+    z-index: 2;
+    box-sizing: border-box;
+    transition: all 0.4s ease;
+}
+
+.rvz_char_nameplate span {
+    font-family: "Cinzel", serif;
+    font-size: 11px;
+    color: #8c7fa6; 
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px #000;
+    transition: color 0.4s ease;
+}
+
+/* Efectos al posar la mirada (Hover) */
+.rvz_char_card:hover {
+    border-color: #685B7D;
+    box-shadow: 0 0 20px rgba(104, 91, 125, 0.3);
+}
+
+.rvz_char_card:hover::before {
+    border-color: rgba(104, 91, 125, 0.6);
+}
+
+.rvz_char_card:hover img {
+    transform: scale(1.08); /* Un suave latido hacia adelante */
+    filter: grayscale(0%) sepia(0%) brightness(1) contrast(1.1); /* Recupera la vida */
+}
+
+.rvz_char_card:hover .rvz_char_nameplate span {
+    color: #e2dcf0; /* El nombre se ilumina */
+}
+
+/* =========================================
+   SECCIÓN DE PARTICIPANTES (ELEGANTE / LILA OSCURO)
+   ========================================= */
+.rvz_elegant_roster {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+.rvz_roster_card {
+    width: 140px;
+    height: 220px;
+    position: relative;
+    background: #000;
+    border: 1px solid #1a1a1a;
+    overflow: hidden;
+    cursor: default;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.9);
+    transition: all 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+
+.rvz_roster_card::before {
+    content: '';
+    position: absolute;
+    top: 6px; left: 6px; right: 6px; bottom: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    z-index: 3;
+    pointer-events: none;
+    transition: all 0.7s ease;
+}
+
+.rvz_roster_img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 1;
+}
+
+.rvz_roster_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 15%;
+    filter: grayscale(100%) brightness(0.55) contrast(1.1);
+    transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.rvz_roster_info {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 40px 15px 20px 15px;
+    background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 45%, transparent 100%);
+    z-index: 2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rvz_roster_name {
+    font-family: "Cinzel", serif;
+    font-size: 13px; 
+    color: #685B7D; 
+    text-transform: uppercase;
+    font-weight: bold; /
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.9); /
+    transition: all 0.5s ease;
+}
+
+
+.rvz_roster_line {
+    width: 0%;
+    height: 1px;
+    background: rgba(104, 91, 125, 0.6); 
+    margin: 8px 0;
+    transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.rvz_roster_role {
+    font-family: "Gideon Roman", serif;
+    font-style: italic;
+    font-size: 11px;
+    color: #ccc;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* =========================================
+   EFECTOS HOVER 
+   ========================================= */
+.rvz_roster_card:hover {
+    border-color: #333;
+    box-shadow: 0 8px 25px rgba(0,0,0,1);
+}
+
+.rvz_roster_card:hover::before {
+    border-color: rgba(104, 91, 125, 0.3); 
+}
+
+.rvz_roster_card:hover .rvz_roster_img img {
+    
+    filter: grayscale(100%) brightness(0.85) contrast(1.1);
+    transform: scale(1.04);
+}
+
+.rvz_roster_card:hover .rvz_roster_name {
+    color: #e2dcf0; 
+    text-shadow: 0 0 10px rgba(104, 91, 125, 0.5);
+}
+
+.rvz_roster_card:hover .rvz_roster_line {
+    width: 60%; 
+}
+
+.rvz_roster_card:hover .rvz_roster_role {
+    opacity: 1;
+    transform: translateY(0);
+}
