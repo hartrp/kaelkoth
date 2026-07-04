@@ -478,7 +478,7 @@
 .rvz_roster_role {
     font-family: "Gideon Roman", serif;
     font-style: italic;
-    font-size: 11px;
+    font-size: 10px;
     color: #ccc;
     opacity: 0;
     transform: translateY(10px);
