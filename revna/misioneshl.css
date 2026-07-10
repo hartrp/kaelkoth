@@ -2,8 +2,8 @@
    PANEL DE ACTUALIZACIÓN DE LA MISIÓN 
    ========================================= */
 .rvz_board_wrapper {
-    --progreso-barra: 20%;       /* <- Modifica el % para rellenar la barra */
-    --progreso-texto: "5 / 20";  /* <- Texto numérico del contador */
+    --progreso-barra: 35%;       /* <- Modifica el % para rellenar la barra */
+    --progreso-texto: "7 / 20";  /* <- Texto numérico del contador */
 
     /* OBJETIVOS: Cambia 'none' por 'block' para rellenar el recuadro con color */
     --check-1: block;   /* Objetivo 1 (5 ofrendas) */
