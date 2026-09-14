@@ -6,11 +6,13 @@
 :root { --hat-ink: #4c7264; --hat-glow: rgba(76,114,100,.55); }
 
 /* NOMBRE */
-.hat-name { text-align: center; margin: 0 auto; }
+.hat-name { text-align: center; margin: 0 auto; margin-bottom: 10px; }
 .hat-name a {
   font-family: 'Hatna', serif;
   font-weight: normal;
   font-size: 84px;
+  line-height: 1;
+  display: inline-block;
   color: var(--hat-ink);
   letter-spacing: 2px;
   text-shadow: 0 0 22px var(--hat-glow), 0 0 2px #000;
@@ -21,7 +23,14 @@
 .hat-photo {
   filter: grayscale(1) sepia(.4) hue-rotate(70deg) saturate(1.7) brightness(.72) contrast(1.2);
 }
-.hat-tapestry { width: 200px; height: 260px; margin: 40px auto 0; position: relative; overflow: hidden; }
+.hat-tapestry {
+  width: 200px; height: 260px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  position: relative;
+  overflow: hidden;
+}
 .hat-glow {
   position: absolute; left: 20%; top: 46%; width: 60%; height: 34%;
   background: radial-gradient(ellipse at center, var(--hat-ink) 0%, transparent 70%);
