@@ -29,8 +29,8 @@
 .hat-tapestry {
   width: 200px; height: 260px;
   margin: 0 auto;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 120px;
+  margin-bottom: 20px;
   position: relative;
   overflow: hidden;
 }
@@ -70,7 +70,7 @@
 }
 .hat-thread { position: absolute; width: 1px; background: var(--hat-ink); opacity: .5; }
 
-.hat-plaque { max-width: 220px; margin: 14px auto 0; text-align: center; }
+.hat-plaque { max-width: 220px; margin: 14px auto 0; text-align: center; margin-bottom: 100px;}
 .hat-plaque .who {
   font-family: 'Hatna', serif; font-size: 20px; letter-spacing: 2px;
   color: var(--hat-ink);
