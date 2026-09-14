@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Spectral:ital,wght@0,400;1,400&display=swap');
+
+@font-face {
+  font-family: 'Hatna';
+  src: url('https://hartrp.github.io/kaelkoth/fonts/Fangvolt.otf') format('opentype');
+}
+
+:root { --hat-ink: #4c7264; --hat-glow: rgba(76,114,100,.55); }
+
+/* NOMBRE */
+.hat-name { text-align: center; margin: 0 auto; }
+.hat-name a {
+  font-family: 'Hatna', serif;
+  font-weight: normal;
+  font-size: 64px;
+  color: var(--hat-ink);
+  letter-spacing: 2px;
+  text-shadow: 0 0 22px var(--hat-glow), 0 0 2px #000;
+  text-decoration: none;
+}
+
+/* RETRATO */
+.hat-photo {
+  filter: grayscale(1) sepia(.4) hue-rotate(70deg) saturate(1.7) brightness(.72) contrast(1.2);
+}
+.hat-tapestry { width: 200px; height: 260px; margin: 40px auto 0; position: relative; overflow: hidden; }
+.hat-glow {
+  position: absolute; left: 20%; top: 46%; width: 60%; height: 34%;
+  background: radial-gradient(ellipse at center, var(--hat-ink) 0%, transparent 70%);
+  filter: blur(9px); mix-blend-mode: screen; opacity: .8;
+}
+.hat-cloth {
+  position: absolute; inset: 0;
+  background-size: cover; background-position: center 22%;
+  clip-path: url(#hatRipClip);
+}
+.hat-cloth::after {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 50% 25%, transparent 40%, #0a0c09 100%);
+  mix-blend-mode: multiply;
+}
+.hat-smoke-wrap {
+  position: absolute; inset: 0;
+  isolation: isolate;
+  pointer-events: none;
+  overflow: hidden;
+  opacity: .8;
+  mix-blend-mode: multiply;
+}
+.hat-smoke-wrap video {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  filter: grayscale(1) brightness(1.4) contrast(.6);
+}
+.hat-smoke-tint {
+  position: absolute; inset: 0;
+  background: var(--hat-ink);
+  mix-blend-mode: color;
+}
+.hat-thread { position: absolute; width: 1px; background: var(--hat-ink); opacity: .5; }
+
+.hat-plaque { max-width: 200px; margin: 14px auto 0; text-align: center; }
+.hat-plaque .who {
+  font-family: 'Hatna', serif; font-size: 20px; letter-spacing: 2px;
+  color: var(--hat-ink);
+  text-shadow: 0 0 16px var(--hat-glow), 0 0 2px #000;
+}
+.hat-plaque .when {
+  margin-top: 3px;
+  font-family: 'Spectral', serif; font-style: regular; font-size: 10.5px;
+  letter-spacing: .5px; color: #6f7871;
+}
+
+/* SEPARADOR: FRANJA + TÍTULO */
+.hat-strip {
+  width: 300px; height: 60px; margin: 50px auto 0;
+  position: relative;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,.55));
+}
+.hat-strip > div {
+  position: absolute; inset: 0;
+  -webkit-mask-image: url('https://i.imgur.com/XXkzFtD.png');
+          mask-image: url('https://i.imgur.com/XXkzFtD.png');
+  -webkit-mask-size: 100% 100%;
+          mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+}
+.hat-strip .tex {
+  background-size: cover;
+  background-position: center 25%;
+  filter: grayscale(1) sepia(.4) hue-rotate(70deg) saturate(1.6) brightness(.78) contrast(1.15);
+}
+.hat-strip .smoke-wrap {
+  isolation: isolate;
+  mix-blend-mode: multiply;
+  opacity: .8;
+  pointer-events: none;
+}
+.hat-strip .smoke-wrap video {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  filter: grayscale(1) brightness(1.35) contrast(.65);
+}
+.hat-strip .smoke-tint {
+  position: absolute; inset: 0;
+  background: var(--hat-ink);
+  mix-blend-mode: color;
+}
+.hat-strip .dark-end {
+  background: radial-gradient(ellipse 90px 60px at 12% 50%, rgba(0,0,0,.95), transparent 70%);
+  mix-blend-mode: multiply;
+  opacity: .8;
+}
+.hat-strip .glint {
+  background: radial-gradient(ellipse 100px 60px at 90% 42%, var(--hat-ink), transparent 72%);
+  mix-blend-mode: screen;
+  opacity: .9;
+}
+
+.hat-title {
+  text-align: center;
+  font-family: 'Hatna', serif;
+  font-size: 26px;
+  color: var(--hat-ink);
+  letter-spacing: 3px;
+  text-shadow: 0 0 16px var(--hat-glow), 0 0 2px #000;
+}
+.hat-title.below { margin: 4px 0 0; }
