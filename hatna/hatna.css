@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Spectral:ital,wght@0,400;1,400&display=swap');
-
 @font-face {
   font-family: 'Hatna';
   src: url('https://hartrp.github.io/kaelkoth/fonts/Fangvolt.otf') format('opentype');
@@ -12,7 +10,7 @@
 .hat-name a {
   font-family: 'Hatna', serif;
   font-weight: normal;
-  font-size: 64px;
+  font-size: 84px;
   color: var(--hat-ink);
   letter-spacing: 2px;
   text-shadow: 0 0 22px var(--hat-glow), 0 0 2px #000;
@@ -47,7 +45,7 @@
   opacity: .8;
   mix-blend-mode: multiply;
 }
-.hat-smoke-wrap video {
+.hat-smoke-wrap img {
   position: absolute; inset: 0;
   width: 100%; height: 100%;
   object-fit: cover;
@@ -60,7 +58,7 @@
 }
 .hat-thread { position: absolute; width: 1px; background: var(--hat-ink); opacity: .5; }
 
-.hat-plaque { max-width: 200px; margin: 14px auto 0; text-align: center; }
+.hat-plaque { max-width: 220px; margin: 14px auto 0; text-align: center; }
 .hat-plaque .who {
   font-family: 'Hatna', serif; font-size: 20px; letter-spacing: 2px;
   color: var(--hat-ink);
@@ -68,11 +66,11 @@
 }
 .hat-plaque .when {
   margin-top: 3px;
-  font-family: 'Spectral', serif; font-style: regular; font-size: 10.5px;
+  font-family: 'Spectral', serif; font-style: italic; font-size: 10.5px;
   letter-spacing: .5px; color: #6f7871;
 }
 
-/* SEPARADOR: FRANJA + TÍTULO */
+/* SEPARADOR: FRANJA + TÍTULO DEBAJO */
 .hat-strip {
   width: 300px; height: 60px; margin: 50px auto 0;
   position: relative;
@@ -98,7 +96,7 @@
   opacity: .8;
   pointer-events: none;
 }
-.hat-strip .smoke-wrap video {
+.hat-strip .smoke-wrap img {
   position: absolute; inset: 0;
   width: 100%; height: 100%;
   object-fit: cover;
