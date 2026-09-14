@@ -6,13 +6,16 @@
 :root { --hat-ink: #4c7264; --hat-glow: rgba(76,114,100,.55); }
 
 /* NOMBRE */
-.hat-name { text-align: center; margin: 0 auto; margin-bottom: 0px; }
+.hat-name {
+  text-align: center;
+  margin: 0 auto -5px auto;
+  margin-bottom: 0px;
+}
 .hat-name a {
   font-family: 'Hatna', serif;
   font-weight: normal;
+  font-style: normal !important;
   font-size: 84px;
-  line-height: 1;
-  display: inline-block;
   color: var(--hat-ink);
   letter-spacing: 2px;
   text-shadow: 0 0 22px var(--hat-glow), 0 0 2px #000;
