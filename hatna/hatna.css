@@ -149,10 +149,9 @@
 .hat-catalog-entry:last-child { border-bottom: none; }
 .hat-catalog-title {
   font-family: 'Hatna', serif;
-  font-size: 22px;
+  font-size: 30px;
   color: var(--hat-ink);
-  letter-spacing: 1px;
-  text-shadow: 0 0 12px var(--hat-glow), 0 0 2px #000;
+  letter-spacing: 2px;
   margin-bottom: 8px;
 }
 .hat-catalog-field {
