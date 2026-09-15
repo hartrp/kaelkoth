@@ -139,3 +139,40 @@
   text-shadow: 0 0 16px var(--hat-glow), 0 0 2px #000;
 }
 .hat-title.below { margin: 4px 0 0; }
+
+.hat-catalog { max-width: 380px; margin: 50px auto; }
+.hat-catalog-entry {
+  margin-bottom: 34px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid rgba(76,114,100,.3);
+}
+.hat-catalog-entry:last-child { border-bottom: none; }
+.hat-catalog-title {
+  font-family: 'Hatna', serif;
+  font-size: 22px;
+  color: var(--hat-ink);
+  letter-spacing: 1px;
+  text-shadow: 0 0 12px var(--hat-glow), 0 0 2px #000;
+  margin-bottom: 8px;
+}
+.hat-catalog-field {
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #6f7871;
+  margin: 3px 0;
+}
+.hat-catalog-field b {
+  color: var(--hat-ink);
+  font-weight: 600;
+}
+.hat-catalog-note {
+  font-family: 'Spectral', serif;
+  font-style: italic;
+  font-size: 13px;
+  line-height: 1.8;
+  color: #8a8a8a;
+  text-align: justify;
+  margin-top: 12px;
+}
