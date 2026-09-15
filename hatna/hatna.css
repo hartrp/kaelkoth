@@ -72,7 +72,7 @@
 
 .hat-plaque { max-width: 220px; margin: 14px auto 0; text-align: center; margin-bottom: 120px;}
 .hat-plaque .who {
-  font-family: 'Hatna', serif; font-size: 30px; letter-spacing: 2px;
+  font-family: 'Hatna', serif; font-size: 40px; letter-spacing: 2px;
   color: var(--hat-ink);
   text-shadow: 0 0 16px var(--hat-glow), 0 0 2px #000;
 }
