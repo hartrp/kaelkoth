@@ -84,7 +84,7 @@
 
 /* SEPARADOR: FRANJA + TÍTULO DEBAJO */
 .hat-strip {
-  width: 300px; height: 60px; margin: 50px auto 0;
+  width: 300px; height: 85px; margin: 50px auto 0;
   position: relative;
   filter: drop-shadow(0 4px 6px rgba(0,0,0,.55));
 }
@@ -98,8 +98,10 @@
           mask-repeat: no-repeat;
 }
 .hat-strip .tex {
-  background-size: cover;
-  background-position: center 25%;
+  background-size: 100%;
+  background-position: 50% 32%;
+  background-repeat: no-repeat;
+  background-color: #1a1e19;
   filter: grayscale(1) sepia(.4) hue-rotate(70deg) saturate(1.6) brightness(.78) contrast(1.15);
 }
 .hat-strip .smoke-wrap {
@@ -125,7 +127,7 @@
   opacity: .8;
 }
 .hat-strip .glint {
-  background: radial-gradient(ellipse 100px 60px at 90% 42%, var(--hat-ink), transparent 72%);
+  background: radial-gradient(ellipse 100px 50px at 90% 42%, var(--hat-ink), transparent 80%);
   mix-blend-mode: screen;
   opacity: .9;
 }
@@ -140,32 +142,41 @@
 }
 .hat-title.below { margin: 4px 0 0; }
 
-.hat-catalog { max-width: 380px; margin: 50px auto; }
+.hat-catalog { max-width: 380px; margin: 20px auto 50px; }
+
 .hat-catalog-entry {
-  margin-bottom: 34px;
-  padding-bottom: 28px;
-  border-bottom: 1px solid rgba(76,114,100,.3);
+  padding: 30px 26px;
+  margin-bottom: 44px;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(76,114,100,.06), transparent 50%);
+  box-shadow: 0 0 30px rgba(76,114,100,.1);
 }
-.hat-catalog-entry:last-child { border-bottom: none; }
+
 .hat-catalog-title {
   font-family: 'Hatna', serif;
-  font-size: 30px;
+  font-size: 23px;
   color: var(--hat-ink);
-  letter-spacing: 2px;
-  margin-bottom: 8px;
+  letter-spacing: 1px;
+  text-shadow: 0 0 2px #000;
+  margin-bottom: 10px;
 }
+
 .hat-catalog-field {
   font-family: 'Cinzel', serif;
-  font-size: 9px;
-  letter-spacing: 1.5px;
+  font-size: 8.5px;
+  letter-spacing: 1.3px;
   text-transform: uppercase;
   color: #6f7871;
-  margin: 3px 0;
+  margin: 4px 0;
 }
-.hat-catalog-field b {
-  color: var(--hat-ink);
-  font-weight: 600;
+.hat-catalog-field b { color: var(--hat-ink); font-weight: 600; }
+
+.hat-catalog-divider {
+  width: 50px; height: 1px;
+  margin: 14px auto;
+  background: linear-gradient(to right, transparent, rgba(76,114,100,.6), transparent);
 }
+
 .hat-catalog-note {
   font-family: 'Spectral', serif;
   font-style: italic;
@@ -173,5 +184,4 @@
   line-height: 1.8;
   color: #8a8a8a;
   text-align: justify;
-  margin-top: 12px;
 }
