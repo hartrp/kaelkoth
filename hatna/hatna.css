@@ -132,6 +132,7 @@
   opacity: .9;
 }
 
+/* TÍTULO DE SECCIÓN */
 .hat-title {
   text-align: center;
   font-family: 'Hatna', serif;
@@ -142,6 +143,13 @@
 }
 .hat-title.below { margin: 4px 0 0; }
 
+.hat-title-divider {
+  width: 50px; height: 1px;
+  margin: 14px auto 0;
+  background: linear-gradient(to right, transparent, rgba(76,114,100,.6), transparent);
+}
+
+/* CATÁLOGO */
 .hat-catalog { max-width: 380px; margin: 20px auto 50px; }
 
 .hat-catalog-entry {
@@ -154,9 +162,9 @@
 
 .hat-catalog-title {
   font-family: 'Hatna', serif;
-  font-size: 23px;
+  font-size: 26px;
   color: var(--hat-ink);
-  letter-spacing: 1px;
+  letter-spacing: 3px;
   text-shadow: 0 0 2px #000;
   margin-bottom: 10px;
 }
@@ -182,6 +190,32 @@
   font-style: italic;
   font-size: 13px;
   line-height: 1.8;
+  color: #8a8a8a;
+  text-align: justify;
+}
+.hat-extra { max-width: 380px; margin: 20px auto 50px; }
+.hat-extra-item {
+  position: relative;
+  padding: 6px 0 6px 8px;
+  margin-bottom: 34px;
+}
+.hat-extra-item .num {
+  position: absolute;
+  top: -22px; left: -6px;
+  font-family: 'Hatna', serif;
+  font-size: 64px;
+  color: var(--hat-ink);
+  opacity: .16;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+.hat-extra-item p {
+  position: relative;
+  margin: 0 0 0 46px;
+  font-family: 'Spectral', serif;
+  font-size: 13px;
+  line-height: 1.85;
   color: #8a8a8a;
   text-align: justify;
 }
